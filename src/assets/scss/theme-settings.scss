@@ -1,0 +1,139 @@
+/*******************
+This is for the minisidebar
+******************/
+
+.mini-sidebar .top-navbar {
+    .navbar-header {
+        width: 70px;
+        text-align: center;
+    }
+}
+
+
+/****************
+When click on sidebar toggler and also for tablet
+*****************/
+.mini-sidebar {
+    .navbar-brand span{
+        display: none;
+    }
+}
+@media(min-width:768px) {
+    .mini-sidebar {
+        .navbar-brand span{
+            display: none;
+        }
+        .sidebar-nav #sidebarnav {
+            li {
+                position: relative;
+            }
+            > li > ul {
+                position: absolute;
+                left: 70px;
+                top: 56px;
+                width: 220px;
+                padding-bottom: 10px;
+                z-index: 1001;
+                background: $sidebar-alt;
+                display: none;
+                padding-left: 1px;
+            }
+            > li:hover > ul {
+                height: auto !important;
+                overflow: auto;
+            }
+            > li:hover > ul,
+            > li:hover > ul.collapse {
+                display: block;
+            }
+            > li > a.has-arrow:after {
+                display: none;
+            }
+        }
+        .user-profile .profile-img {
+            width: 50px;
+            .setpos {
+                top: -35px;
+            }
+        }
+        &.fix-sidebar .left-sidebar {
+            position: fixed;
+        }
+    }
+    .mini-sidebar {
+        .left-sidebar {
+            width: 70px;
+        }
+        .user-profile {
+            padding-bottom: 15px;
+            width: 70px;
+            margin-bottom: 7px;
+            .profile-img {
+                padding: 15px 0 0 0;
+                &:before {
+                    top: 15px;
+                }
+            }
+        }
+        .scroll-sidebar {
+            padding-bottom: 0px;
+            position: absolute;
+        }
+        .hide-menu,
+        .nav-small-cap,
+        .sidebar-footer,
+        .user-profile .profile-text,
+        >.label {
+            display: none;
+        }
+        .nav-devider {
+            width: 70px;
+        }
+        .sidebar-nav {
+            background: transparent;
+        }
+        .sidebar-nav #sidebarnav > li > a {
+            padding: 12px 24px;
+            width: 70px;
+        }
+        .sidebar-nav #sidebarnav > li:hover > a {
+            width: 290px;
+            background: $sidebar-alt;
+            .hide-menu {
+                display: inline;
+            }
+            .label {
+                display: none;
+            }
+        }
+        .upgrade-btn {
+            display: none;
+        }
+    }
+}
+
+@media(max-width:767px) {
+    .mini-sidebar {
+            .left-sidebar,
+            .sidebar-footer {
+                left: -240px;
+            }
+        
+    }
+}
+
+
+/*******************
+This is for the Logo in center
+******************/
+
+.logo-center {
+    .top-navbar {
+        .navbar-header {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+    }
+}

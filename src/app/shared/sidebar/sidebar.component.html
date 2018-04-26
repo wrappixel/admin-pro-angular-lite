@@ -1,0 +1,46 @@
+<nav class="sidebar-nav">
+    <ul id="sidebarnav">
+        <li class="user-profile" [class.active]="showMenu === 'user'">
+          <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" (click)="addExpandClass('user')" aria-expanded="false"><img src="assets/images/users/profile.png" alt="user" /><span class="hide-menu">Steave Jobs </span></a>
+          <ul aria-expanded="false" class="collapse" [class.in]="showMenu === 'user'">
+            <li><a href="javascript:void()">My Profile </a></li>
+            <li><a href="javascript:void()">My Balance</a></li>
+            <li><a href="javascript:void()">Inbox</a></li>
+            <li><a href="javascript:void()">Account Setting</a></li>
+            <li><a href="javascript:void()">Logout</a></li>
+          </ul>  
+        </li>
+        <li class="nav-devider"></li>
+        <!-- First level menu -->
+        <li [class.active]="showMenu === sidebarnavItem.title" *ngFor="let sidebarnavItem of sidebarnavItems" [routerLinkActive]="sidebarnavItem.submenu.length != 0 ? '' : 'active'" >
+                <div class="nav-small-cap" *ngIf="sidebarnavItem.extralink === true">{{sidebarnavItem.title}}</div>
+                <a [routerLink]="sidebarnavItem.class === '' ? [sidebarnavItem.path] : null" [ngClass]="[sidebarnavItem.class]" *ngIf="!sidebarnavItem.extralink;" (click)="addExpandClass(sidebarnavItem.title)">
+                    <i [ngClass]="[sidebarnavItem.icon]"></i>
+                    <span class="hide-menu">{{sidebarnavItem.title}}
+                    <span *ngIf="sidebarnavItem.label != '' " [ngClass]="[sidebarnavItem.labelClass]">{{sidebarnavItem.label}}</span>
+                    </span>    
+                </a>
+                <!-- Second level menu -->
+                <ul class="collapse" *ngIf="sidebarnavItem.submenu.length > 0" [ngClass]="{'in' : showMenu === sidebarnavItem.title }">
+                    <li *ngFor="let sidebarnavSubItem of sidebarnavItem.submenu" [class.active]="showSubMenu === sidebarnavSubItem.title" [routerLinkActive]="sidebarnavSubItem.submenu.length > 0 ? '' : 'active'">
+                        <a [routerLink]="sidebarnavSubItem.submenu.length > 0 ? null : [sidebarnavSubItem.path]" [routerLinkActive]="sidebarnavSubItem.submenu.length > 0 ? '' : 'router-link-active'" [ngClass]="[sidebarnavSubItem.class]"  *ngIf="!sidebarnavSubItem.extralink;" (click)="addActiveClass(sidebarnavSubItem.title)">
+                            <i [ngClass]="[sidebarnavSubItem.icon]"></i>
+                            {{sidebarnavSubItem.title}}
+                        </a>
+                        <!-- Third level menu -->
+                        <ul class="collapse" *ngIf="sidebarnavSubItem.submenu.length > 0" [ngClass]="{'in' : showSubMenu === sidebarnavSubItem.title }">
+                            <li *ngFor="let sidebarnavSubsubItem of sidebarnavSubItem.submenu" routerLinkActive="active" [ngClass]="[sidebarnavSubsubItem.class]">
+                                <a [routerLink]="[sidebarnavSubsubItem.path]" *ngIf="!sidebarnavSubsubItem.extralink;" [routerLinkActive]="sidebarnavSubsubItem.submenu.length > 0 ? '' : 'router-link-active'">
+                                    <i [ngClass]="[sidebarnavSubsubItem.icon]"></i>
+                                    {{sidebarnavSubsubItem.title}}
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+        </li>
+        <li class="m-t-40 p-20 upgrade-btn">
+            <a href="https://wrappixel.com/templates/adminpro-angular-dashboard/" target="_blank" class="btn btn-danger text-white">Upgrade To Pro</a>
+        </li>
+    </ul>
+</nav> 
