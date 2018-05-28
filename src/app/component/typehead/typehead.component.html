@@ -28,8 +28,8 @@
                 <h3 class="card-title">Wikipedia search</h3>
                 <h6 class="card-subtitle">A typeahead example that gets values from the <code>WikipediaService</code></h6>
                     <div class="form-group" [class.has-danger]="searchFailed">
-                      <label for="typeahead-http">Search for a wiki page:</label>
-                      <input id="typeahead-http" type="text" class="form-control" [(ngModel)]="model2" [ngbTypeahead]="search2" placeholder="Wikipedia search" />
+                      <label for="typeahead-Http">Search for a wiki page:</label>
+                      <input id="typeahead-Http" type="text" class="form-control" [(ngModel)]="model2" [ngbTypeahead]="search2" placeholder="Wikipedia search" />
                       <span *ngIf="searching">searching...</span>
                       <div class="form-control-feedback" *ngIf="searchFailed">Sorry, suggestions could not be loaded.</div> 
                     </div>
@@ -45,7 +45,7 @@
                 <h3 class="card-title">Template for results</h3>
                 <h6 class="card-subtitle">A typeahead example that uses custom template for results display and uses object as a model</h6>
                 <ng-template #rt let-r="result" let-t="term">
-                  <img [src]="'https://upload.wikimedia.org/wikipedia/commons/thumb/' + r.flag" width="16">
+                  <img [src]="'Https://upload.wikimedia.org/wikipedia/commons/thumb/' + r.flag" width="16">
                   {{ r.name}}
                 </ng-template>
 

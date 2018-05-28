@@ -1,6 +1,6 @@
 import { Component, Injectable } from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import {Jsonp, URLSearchParams} from '@angular/http';
+import {Jsonp, URLSearchParams} from '@angular/Http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
@@ -85,7 +85,7 @@ export class WikipediaService {
       return Observable.of([]);
     }
 
-    let wikiUrl = 'https://en.wikipedia.org/w/api.php';
+    let wikiUrl = 'Https://en.wikipedia.org/w/api.php';
     let params = new URLSearchParams();
     params.set('search', term);
     params.set('action', 'opensearch');
