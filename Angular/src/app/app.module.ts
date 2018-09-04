@@ -1,7 +1,11 @@
 import * as $ from 'jquery';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CommonModule, LocationStrategy, HashLocationStrategy } from '@angular/common';
+import {
+  CommonModule,
+  LocationStrategy,
+  PathLocationStrategy
+} from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
@@ -24,7 +28,7 @@ import { SpinnerComponent } from './shared/spinner.component';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
   wheelSpeed: 2,
-  wheelPropagation: true,
+  wheelPropagation: true
 };
 
 @NgModule({
@@ -39,21 +43,23 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   imports: [
     CommonModule,
     BrowserModule,
-    BrowserAnimationsModule,   
+    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
     NgbModule.forRoot(),
-    RouterModule.forRoot(Approutes, { useHash: false }),  
+    RouterModule.forRoot(Approutes, { useHash: false }),
     PerfectScrollbarModule
   ],
   providers: [
-      {
+    {
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-    },{
-    provide: LocationStrategy,
-    useClass: HashLocationStrategy
-  }],
+    },
+    {
+      provide: LocationStrategy,
+      useClass: PathLocationStrategy
+    }
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
