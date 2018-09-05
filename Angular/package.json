@@ -42,8 +42,8 @@
     "pace-js": "^1.0.2",
     "popper.js": "^1.12.5",
     "rxjs": "^6.2.0",
-    "zone.js": "^0.8.4",
-    "rxjs-compat": "^6.0.0-rc.0"
+    "rxjs-compat": "^6.0.0-rc.0",
+    "zone.js": "^0.8.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.5",
