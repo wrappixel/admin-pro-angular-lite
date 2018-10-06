@@ -9,7 +9,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 <h4>Check this Repo Live Demo</h4>
-<h3><a href=""https://wrappixel.com/demos/angular-admin-templates/admin-pro-angular-lite/>Demo</a></h3>
+<h3><a href="https://wrappixel.com/demos/angular-admin-templates/admin-pro-angular-lite/">Demo</a></h3>
 
 ## Development server
 
