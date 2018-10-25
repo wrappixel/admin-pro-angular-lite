@@ -58,6 +58,11 @@ File: scss
         }
     }
     /*This is for the breeadcrumd*/
+    .page-titles{
+        .breadcrumb{
+            float:right;
+        }
+    }
     .card-group .card:first-child, .card-group .card:not(:first-child):not(:last-child){
         border-right:1px solid rgba(0, 0, 0, 0.03);
         
@@ -70,10 +75,10 @@ File: scss
     }
    .mini-sidebar {
         .page-wrapper{
-            margin-left:70px;
+            margin-left:0px;
         }
         .footer{
-            left: 70px;
+            left: 0px;
         }
     }
     .flex-wrap{

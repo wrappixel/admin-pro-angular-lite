@@ -5,7 +5,6 @@ Email: niravjoshi87@gmail.com
 File: scss
 */
 
-@import '../variable';
 $themecolor: #398bf7;
 $themecolor-dark: #028ee1;
 $topbar: #fff;
@@ -16,7 +15,6 @@ $sidebar-dark: #1c2128;
 $sidebar-alt:#1c2128;
 $themecolor-alt: #26c6da;
 $topbar-alt: #398bf7;
-
 .defaultdark {
 /*******************
 /*Top bar
@@ -44,8 +42,7 @@ $topbar-alt: #398bf7;
     }
     .logo-center .topbar {
         .navbar-header {
-            text-align: center;
-            padding-left: 0px;
+            background: transparent;
             box-shadow: none;
         }
         .top-navbar .navbar-header .navbar-brand .dark-logo {
@@ -56,8 +53,7 @@ $topbar-alt: #398bf7;
             color: rgba(255, 255, 255, 0.8);
         }
     }
-
-/*******************
+    /*******************
 /*General Elements
 *******************/
     a.link {
@@ -74,8 +70,7 @@ $topbar-alt: #398bf7;
     .text-themecolor {
         color: $themecolor!important;
     }
-
-/*******************
+    /*******************
 /*Buttons
 *******************/
     .btn-themecolor,
@@ -93,7 +88,6 @@ $topbar-alt: #398bf7;
             background: $themecolor-dark;
         }
     }
-    
 /*******************
 /*sidebar navigation
 *******************/
@@ -111,13 +105,7 @@ $topbar-alt: #398bf7;
     .label-themecolor {
         background: $themecolor;
     }
-    .sidebar-nav>ul>li.active>a {
-        color: $themecolor;
-        border-color: $themecolor;
-        i {
-            color: $themecolor;
-        }
-    }
+    
     .sidebar-nav ul li a {
         &.router-link-active,
         &:hover {
@@ -131,12 +119,19 @@ $topbar-alt: #398bf7;
         color: $sidebar-text;
     }
     @media (min-width: 768px) {
-    &.mini-sidebar .sidebar-nav #sidebarnav > li > ul {
+    &.horizontal-nav .sidebar-nav #sidebarnav > li > ul {
         background: $sidebar-alt;
     }
-    &.mini-sidebar .sidebar-nav #sidebarnav > li:hover > a {
+    &.horizontal-nav .sidebar-nav #sidebarnav > li:hover > a {
         background: $sidebar-alt;
     }
+    &.mini-sidebar .sidebar-nav #sidebarnav {
+        > li > ul, > li:hover > a  {
+            background: $sidebar-alt;
+        }
+
+    }
+    
 }
 }
 

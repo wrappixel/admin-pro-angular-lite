@@ -1,0 +1,202 @@
+/*
+Template Name: Admin Press Admin
+File: scss
+*/
+
+$themecolor: #009efb;
+$themecolor-dark: #028ee1;
+
+$sidebar:#272c33;
+$sidebar-text: #798699;
+$sidebar-icons: #798699;
+$sidebar-dark: #181c22;
+$sidebar-alt: #181c22;
+$themecolor-alt: #26c6da;
+$topbar-alt: #272c33;
+$theme-dark:#272c33;
+$theme-dark-alt: #3d4554;
+$theme-dark-odd: #1f2227;
+$border: rgba(120, 130, 140, 0.13);
+$light: #bbbbbb;
+$extralight: #7d8b92;
+.dark-theme {
+  /*******************
+/*Top bar
+*******************/
+  .topbar {
+
+    .top-navbar .navbar-header .navbar-brand .dark-logo {
+      display: none;
+    }
+    .top-navbar .navbar-header .navbar-brand .light-logo {
+      display: inline-block;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .navbar-light .navbar-nav .nav-item> {
+      a.nav-link {
+          color: #a6b7bf;
+          &:hover,
+          &:focus {
+              color:#242a33!important;
+          }
+      }
+    }
+    .navbar-header {
+      background: $topbar-alt;
+    }
+  }
+  /*******************
+/*General Elements
+*******************/
+  a.link {
+    &:hover,
+    &:focus {
+      color: $themecolor!important;
+    }
+  }
+  .right-sidebar {
+    .rpanel-title {
+      background: $themecolor;
+    }
+  }
+  .text-themecolor {
+    color: $themecolor!important;
+  }
+  /*******************
+/*sidebar navigation
+*******************/
+  .left-sidebar,
+  .card-no-border .left-sidebar,
+  .card-no-border .sidebar-nav {
+    background: $sidebar;
+  }
+  .user-profile .profile-text a {
+    color: $sidebar-text!important;
+  }
+  .card-no-border .sidebar-footer {
+    background: $sidebar-dark;
+  }
+  .label-themecolor {
+    background: $themecolor;
+  }
+  .sidebar-nav>ul>li.active>a {
+    color: $themecolor;
+    border-color: $themecolor;
+    i {
+      color: $themecolor;
+    }
+  }
+
+  .sidebar-nav ul li.nav-small-cap {
+    color: $sidebar-text;
+  }
+  @media (min-width: 768px) {
+    &.mini-sidebar .sidebar-nav #sidebarnav>li>ul {
+      background: $sidebar-alt;
+    }
+    &.mini-sidebar .sidebar-nav #sidebarnav>li:hover>a {
+      background: $sidebar-alt;
+    }
+  }
+  /*******************
+/* Light colors conversion
+*******************/
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $light;
+  }
+  /*******************
+/* General light colors font conversion
+*******************/
+  .todo-list li .checkbox label,
+  .page-link,
+  .list-group-item-action,
+  .custom-select,
+  .custom-file-control,
+  .form-control:focus,
+  .btn-light,
+  .dropdown-menu,
+  .navbar-light .navbar-nav .nav-link,
+  .ngx-datatable.material .datatable-body .datatable-body-row .datatable-body-cell {
+    color: $extralight;
+  }
+  /*******************
+/* Dark -alt conversion
+*******************/
+  .page-wrapper,
+  .form-control,
+  .progress,
+  .page-item.disabled .page-link,
+  .page-link,
+  .btn-secondary,
+  .btn-outline-secondary,
+  .btn-secondary.disabled {
+    background: $theme-dark-alt;
+  }
+  .custom-select,
+  .custom-file-control,
+  .mailbox .message-center a:hover,
+  .mega-dropdown .nav-accordion .card-header,
+  .table-striped tbody tr:nth-of-type(odd),
+  .ngx-datatable.material {
+    background-color: $theme-dark-alt;
+  }
+  /*******************
+/* Dark  conversion
+*******************/
+  .card,
+  .list-group-item,
+  .bg-white,
+  .nav-tabs .nav-link.active,
+  .btn-outline-primary {
+    background: $theme-dark;
+  }
+  /*******************
+/* Dark border conversion
+*******************/
+  .form-control,
+  .table td,
+  .table th,
+  .page-item.disabled .page-link,
+  .page-link,
+  .btn-secondary,
+  .btn-secondary.disabled,
+  .btn-outline-secondary,
+  .cal-month-view .cal-day-cell:not(:last-child),
+  .cal-month-view .cal-days .cal-cell-row,
+  .cal-month-view .cal-days,
+  .nav-tabs .nav-link.active,
+  .nav-tabs,
+  .dragndrop>div,
+  .custom-select,
+  .custom-file-control,
+  .input-group-addon,
+  .table-bordered {
+    border-color: $border;
+  }
+  /*******************
+/* Dark -odd border conversion
+*******************/
+  .card-default .card-header,
+  .footer,
+  .bg-light,
+  .table-hover tbody tr:hover,
+  .right-sidebar,
+  .cal-month-view .cal-cell-row:hover,
+  .cal-month-view .cal-cell-row .cal-cell:hover,
+  .cal-month-view .cal-cell.cal-has-events.cal-open,
+  .cal-month-view .cal-open-day-events,
+  .cal-day-view .cal-hour:nth-child(odd),
+  .taskboard .taskboard-task,
+  .input-group-addon,
+  .dropdown-menu {
+    background: $theme-dark-odd!important;
+  }
+  .page-titles {
+    background: transparent;
+  }
+}

@@ -450,3 +450,93 @@
     </div>
 </div>
 <!-- End Row -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Checkbox buttons</h4>
+                <div class="btn-group btn-group-toggle">
+                  <label class="btn-primary" ngbButtonLabel>
+                    <input type="checkbox" ngbButton [(ngModel)]="model.left"> Left (pre-checked)
+                  </label>
+                  <label class="btn-primary" ngbButtonLabel>
+                    <input type="checkbox" ngbButton [(ngModel)]="model.middle"> Middle
+                  </label>
+                  <label class="btn-primary" ngbButtonLabel>
+                    <input type="checkbox" ngbButton [(ngModel)]="model.right"> Right
+                  </label>
+                </div>
+                <hr>
+                <pre>{{model | json}}</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Checkbox buttons(Reactive Forms)</h4>
+                <form [formGroup]="checkboxGroupForm">
+                  <div class="btn-group btn-group-toggle">
+                    <label class="btn-primary" ngbButtonLabel>
+                      <input type="checkbox" formControlName="left" ngbButton> Left (pre-checked)
+                    </label>
+                    <label class="btn-primary" ngbButtonLabel>
+                      <input type="checkbox" formControlName="middle" ngbButton> Middle
+                    </label>
+                    <label class="btn-primary" ngbButtonLabel>
+                      <input type="checkbox" formControlName="right" ngbButton> Right
+                    </label>
+                  </div>
+                </form>
+                <hr>
+                <pre>{{checkboxGroupForm.value | json}}</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Radio Buttons</h4>
+                <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="model1">
+                  <label ngbButtonLabel class="btn-primary">
+                    <input ngbButton type="radio" [value]="1"> Left (pre-checked)
+                  </label>
+                  <label ngbButtonLabel class="btn-primary">
+                    <input ngbButton type="radio" value="middle"> Middle
+                  </label>
+                  <label ngbButtonLabel class="btn-primary">
+                    <input ngbButton type="radio" [value]="false"> Right
+                  </label>
+                </div>
+                <hr>
+                <pre>{{model1}}</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Radio Buttons(Reactive Forms)</h4>
+                <form [formGroup]="radioGroupForm">
+                  <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" formControlName="model">
+                    <label ngbButtonLabel class="btn-primary">
+                      <input ngbButton type="radio" [value]="1"> Left (pre-checked)
+                    </label>
+                    <label ngbButtonLabel class="btn-primary">
+                      <input ngbButton type="radio" value="middle"> Middle
+                    </label>
+                    <label ngbButtonLabel class="btn-primary">
+                      <input ngbButton type="radio" [value]="false"> Right
+                    </label>
+                  </div>
+                </form>
+                <hr>
+                <pre>{{radioGroupForm.value['model']}}</pre>
+            </div>
+        </div>
+    </div>
+</div>

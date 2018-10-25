@@ -5,8 +5,7 @@ import { RouteInfo } from './sidebar.metadata';
 import { Router, ActivatedRoute } from '@angular/router';
 declare var $: any;
 @Component({
-  // tslint:disable-next-line:component-selector
-  selector: 'ap-sidebar',
+  selector: 'app-sidebar',
   templateUrl: './sidebar.component.html'
 })
 export class SidebarComponent implements OnInit {
@@ -21,7 +20,7 @@ export class SidebarComponent implements OnInit {
       this.showMenu = element;
     }
   }
-
+  
   constructor(
     private modalService: NgbModal,
     private router: Router,
@@ -30,16 +29,5 @@ export class SidebarComponent implements OnInit {
   // End open close
   ngOnInit() {
     this.sidebarnavItems = ROUTES.filter(sidebarnavItem => sidebarnavItem);
-    $(function() {
-      $('.sidebartoggler').on('click', function() {
-        if ($('#main-wrapper').hasClass('mini-sidebar')) {
-          $('body').trigger('resize');
-          $('#main-wrapper').removeClass('mini-sidebar');
-        } else {
-          $('body').trigger('resize');
-          $('#main-wrapper').addClass('mini-sidebar');
-        }
-      });
-    });
   }
 }
