@@ -7,7 +7,7 @@
                 <ngb-alert [dismissible]="false">
                     <strong>Warning!</strong> Better check yourself, you're not looking too good.
                   </ngb-alert>
-                    
+  					
             </div>
         </div>
         <div class="card">
@@ -20,7 +20,7 @@
                 <p>
                   <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
                 </p>
-                    
+  					
             </div>
         </div>
 
@@ -29,11 +29,11 @@
                 <h3 class="card-title">Self Closing  Alert</h3>
                 <h6 class="card-subtitle">Static self-closing alert that disappears after 20 seconds (refresh the page if it has already disappeared)</h6>
                 <ngb-alert *ngIf="!staticAlertClosed" (close)="staticAlertClosed = true">Check out our awesome new features!</ngb-alert>
-                <p>Show a self-closing success message that disappears after 5 seconds.</p>
-                <ngb-alert *ngIf="successMessage" type="success" (close)="successMessage = null">{{ successMessage }}</ngb-alert>   
-                <p>
-                  <button class="btn btn-primary" (click)="changeSuccessMessage()">Change message</button>
-                </p>
+  				<p>Show a self-closing success message that disappears after 5 seconds.</p>
+  				<ngb-alert *ngIf="successMessage" type="success" (close)="successMessage = null">{{ successMessage }}</ngb-alert>	
+  				<p>
+				  <button class="btn btn-primary" (click)="changeSuccessMessage()">Change message</button>
+				</p>
             </div>
         </div>
 

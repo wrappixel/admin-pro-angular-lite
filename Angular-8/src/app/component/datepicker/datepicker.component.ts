@@ -1,15 +1,12 @@
-import { Component } from '@angular/core';
-import { NgbDateStruct, NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
+import { Component, Injectable } from '@angular/core';
+import { NgbDateStruct, NgbCalendar, NgbDateAdapter, NgbDateNativeAdapter, NgbDate } from '@ng-bootstrap/ng-bootstrap';
 
 const my = new Date();
 
 // This is for the range date picker
+// tslint:disable-next-line:max-line-length
 const equals = (one: NgbDateStruct, two: NgbDateStruct) =>
-  one &&
-  two &&
-  two.year === one.year &&
-  two.month === one.month &&
-  two.day === one.day;
+  one && two && two.year === one.year && two.month === one.month && two.day === one.day;
 
 const before = (one: NgbDateStruct, two: NgbDateStruct) =>
   !one || !two
@@ -32,11 +29,12 @@ const after = (one: NgbDateStruct, two: NgbDateStruct) =>
           : one.day > two.day
         : one.month > two.month
       : one.year > two.year;
-// End  range date picker
+// End range date picker
 
 @Component({
   selector: 'app-datepicker-basic',
   templateUrl: './datepicker.component.html',
+  providers: [{ provide: NgbDateAdapter, useClass: NgbDateNativeAdapter }],
   styles: [
     `
       .custom-day {
@@ -57,24 +55,43 @@ const after = (one: NgbDateStruct, two: NgbDateStruct) =>
       .faded {
         opacity: 0.5;
       }
+      .weekend {
+        background-color: #242a33;
+        border-radius: 1rem;
+        color: white;
+      }
+      .hidden {
+        display: none;
+      }
     `
   ]
 })
 export class NgbdDatepickerBasicComponent {
   model: NgbDateStruct;
+  model4: NgbDateStruct;
+
   model2;
   date: { year: number; month: number };
+
+  // Custom date adapter
+  model1: Date;
+  model11: Date;
+
+  // footer
+  model5: NgbDateStruct;
+  today5 = this.calendar5.getToday();
+
+  get today() {
+    return new Date();
+  }
 
   // This is for multiple month
   displayMonths = 2;
   navigation = 'select';
+  showWeekNumbers = false;
 
   // This is for the disable datepicker
-  model3: NgbDateStruct = {
-    year: my.getFullYear(),
-    month: my.getMonth() + 1,
-    day: my.getDate()
-  };
+  model3: NgbDateStruct = { year: my.getFullYear(), month: my.getMonth() + 1, day: my.getDate() };
   disabled = true;
 
   // This is for the range date picker
@@ -84,14 +101,10 @@ export class NgbdDatepickerBasicComponent {
   toDate: NgbDateStruct;
 
   selectToday() {
-    this.model = {
-      year: my.getFullYear(),
-      month: my.getMonth() + 1,
-      day: my.getDate()
-    };
+    this.model = { year: my.getFullYear(), month: my.getMonth() + 1, day: my.getDate() };
   }
 
-  constructor(calendar: NgbCalendar) {
+  constructor(calendar: NgbCalendar, private calendar1: NgbCalendar, private calendar5: NgbCalendar) {
     this.fromDate = calendar.getToday();
     this.toDate = calendar.getNext(calendar.getToday(), 'd', 10);
   }
@@ -107,14 +120,10 @@ export class NgbdDatepickerBasicComponent {
     }
   }
 
-  isHovered = date =>
-    this.fromDate &&
-    !this.toDate &&
-    this.hoveredDate &&
-    after(date, this.fromDate) &&
-    // tslint:disable-next-line:semicolon
-    before(date, this.hoveredDate);
+  isHovered = date => this.fromDate && !this.toDate && this.hoveredDate && after(date, this.fromDate) && before(date, this.hoveredDate);
   isInside = date => after(date, this.fromDate) && before(date, this.toDate);
   isFrom = date => equals(date, this.fromDate);
   isTo = date => equals(date, this.toDate);
+  isDisabled = (date: NgbDate, current: { month: number }) => date.month !== current.month;
+  isWeekend = (date: NgbDate) => this.calendar1.getWeekday(date) >= 6;
 }

@@ -21,11 +21,11 @@ import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 })
 export class NgbdPopTooltipComponent {
   greeting = {};
+
+  name = 'World';
   lastShown: Date;
   lastHidden: Date;
-  name = 'World';
-
-  @ViewChild('p'),{static:true} public popover;
+  @ViewChild('p', { static: true }) public popover;
 
   public changeGreeting(greeting: any): void {
     const isOpen = this.popover.isOpen();
@@ -33,6 +33,14 @@ export class NgbdPopTooltipComponent {
     if (greeting !== this.greeting || !isOpen) {
       this.greeting = greeting;
       this.popover.open(greeting);
+    }
+  }
+
+  toggleWithGreeting(tooltip, greeting: string) {
+    if (tooltip.isOpen()) {
+      tooltip.close();
+    } else {
+      tooltip.open({ greeting });
     }
   }
 

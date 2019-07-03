@@ -1,10 +1,38 @@
-import { Component } from '@angular/core';
-import { NgbTimeStruct } from '@ng-bootstrap/ng-bootstrap';
+import { Component, Injectable } from '@angular/core';
+import { NgbTimeStruct, NgbTimeAdapter } from '@ng-bootstrap/ng-bootstrap';
 import { FormControl } from '@angular/forms';
+
+@Injectable()
+export class NgbTimeStringAdapter extends NgbTimeAdapter<string> {
+
+  fromModel(value: string): NgbTimeStruct {
+    if (!value) {
+      return null;
+    }
+    const split = value.split(':');
+    return {
+      hour: parseInt(split[0], 10),
+      minute: parseInt(split[1], 10),
+      second: parseInt(split[2], 10)
+    };
+  }
+
+  toModel(time1: NgbTimeStruct): string {
+    if (!time1) {
+      return null;
+    }
+    return `${this.pad(time1.hour)}:${this.pad(time1.minute)}:${this.pad(time1.second)}`;
+  }
+
+  private pad(i: number): string {
+    return i < 10 ? `0${i}` : `${i}`;
+  }
+}
 
 @Component({
   selector: 'app-ngbd-timepicker',
-  templateUrl: './timepicker.component.html'
+  templateUrl: './timepicker.component.html',
+  providers: [{provide: NgbTimeAdapter, useClass: NgbTimeStringAdapter}]
 })
 export class NgbdtimepickerBasicComponent {
   time = { hour: 13, minute: 30 };
@@ -21,6 +49,9 @@ export class NgbdtimepickerBasicComponent {
   hourStep = 1;
   minuteStep = 15;
   secondStep = 30;
+
+  // last
+  time1: '13:30:00';
 
   // This is for the validation
   time3;

@@ -19,8 +19,8 @@ import { NgbdratingBasicComponent } from './rating/rating.component';
 import { NgbdtabsBasicComponent } from './tabs/tabs.component';
 import { NgbdtimepickerBasicComponent } from './timepicker/timepicker.component';
 import { NgbdtypeheadBasicComponent } from './typehead/typehead.component';
-import { CardsComponent } from './card/card.component';
 import { ButtonsComponent } from './buttons/buttons.component';
+import { CardsComponent } from './card/card.component';
 
 @NgModule({
   imports: [
@@ -44,8 +44,8 @@ import { ButtonsComponent } from './buttons/buttons.component';
     NgbdtabsBasicComponent,
     NgbdtimepickerBasicComponent,
     NgbdtypeheadBasicComponent,
-    CardsComponent,
-    ButtonsComponent
+    ButtonsComponent,
+    CardsComponent
   ]
 })
 export class ComponentsModule {}
