@@ -1,0 +1,1627 @@
+/*
+Template Name: Admin Press Admin
+Author: Themedesigner
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+
+@import 'variable';
+
+
+/*============================================================== 
+ For all pages 
+ ============================================================== */
+
+#main-wrapper {
+  width: 100%;
+}
+
+.boxed #main-wrapper {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+  .sidebar-footer {
+    position: absolute;
+  }
+  .footer {
+    display: none;
+  }
+}
+
+.page-wrapper {
+  background: $bodycolor;
+  padding-bottom: 60px;
+  height: calc(100vh - 64px); 
+  position: relative;
+    overflow: auto;
+}
+
+.container-fluid {
+  padding: 25px;
+}
+
+
+
+/*******************
+ Topbar
+*******************/
+
+.topbar {
+  position: relative;
+  z-index: 50;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  .top-navbar {
+    min-height: 50px;
+    padding: 0px 15px 0 0;
+    .dropdown-toggle::after {
+      display: none;
+    }
+    .navbar-header {
+      line-height: 45px;
+      padding-left: 10px;
+      .navbar-brand {
+        margin-right: 0px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        .light-logo {
+          display: none;
+        }
+        b {
+          line-height: 60px;
+          display: inline-block;
+        }
+      }
+    }
+    .navbar-nav>.nav-item>.nav-link {
+      padding-left: .75rem;
+      padding-right: .75rem;
+      font-size: 15px;
+      line-height: 40px;
+    }
+    .navbar-nav>.nav-item.show {
+      background: $dark-transparent;
+    }
+  }
+  .profile-pic {
+    width: 30px;
+    border-radius: 100%;
+  }
+  .dropdown-menu {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    border-color: $border;
+    .dropdown-item {
+      padding: 7px 1.5rem;
+    }
+  }
+  ul.dropdown-user {
+    padding: 0px;
+    min-width: 270px;
+    li {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      &.divider {
+        height: 1px;
+        margin: 9px 0;
+        overflow: hidden;
+        background-color: $border;
+      }
+      .dw-user-box {
+        padding: 10px 15px;
+        .u-img {
+          width: 70px;
+          display: inline-block;
+          vertical-align: top;
+          img {
+            width: 100%;
+            border-radius: 5px;
+          }
+        }
+        .u-text {
+          display: inline-block;
+          padding-left: 10px;
+          h4 {
+            margin: 0px;
+            font-size: 15px;
+          }
+          p {
+            margin-bottom: 2px;
+            font-size: 12px;
+          }
+          .btn {
+            color: $white;
+            padding: 5px 10px;
+            display: inline-block;
+            &:hover {
+              background: $danger-dark;
+            }
+          }
+        }
+      }
+      a {
+        padding: 9px 15px;
+        display: block;
+        color: $bodytext;
+        &:hover {
+          background: $light;
+          color: $themecolor;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.search-box {
+  .app-search {
+    position: absolute;
+    margin: 0px;
+    display: block;
+    z-index: 110;
+    width: 100%;
+    top: -1px;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0px;
+    &.show-search {
+      display: block;
+    }
+    input {
+      width: 100.5%;
+      padding: 20px 40px 20px 20px;
+      border-radius: 0px;
+      font-size: 17px;
+      transition: 0.5s ease-in;
+      &:focus {
+        border-color: $white;
+      }
+    }
+    .srh-btn {
+      position: absolute;
+      top: 23px;
+      cursor: pointer;
+      background: $white;
+      width: 15px;
+      height: 15px;
+      right: 20px;
+      font-size: 14px;
+    }
+  }
+}
+
+/*******************
+ Breadcrumb and page title
+*******************/
+
+.page-titles {
+    margin-bottom: 30px;
+    padding: 0px;
+    h3 {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .breadcrumb {
+        padding: 0px;
+        margin-bottom:0px;
+        background: transparent;
+        font-size: 14px;
+        li {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        .breadcrumb-item+.breadcrumb-item::before {
+            content: "\e649";
+            font-family: themify;
+            color: $light-text;
+            font-size: 11px;
+        }
+        .breadcrumb-item.active {
+            color: $muted;
+        }
+    }
+}
+
+
+
+/*******************
+ Right side toggle
+*******************/
+
+
+.right-side-toggle {
+  position: relative;
+     
+}
+.btn-circle.right-side-toggle{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  padding:25px;
+  z-index:10;
+}
+.right-side-toggle i {
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 1s;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 1s;
+  transition-property: transform;
+  transition-duration: 1s;
+  
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.right-sidebar {
+  position: fixed;
+  right: -240px;
+  width: 240px;
+  display: none;
+  z-index: 1100;
+  background: $white;
+  top: 0px;
+  padding-bottom: 20px;
+  height: 100%;
+  box-shadow: 5px 1px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  .rpanel-title {
+    display: block;
+    padding: 19px 20px;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 15px;
+    background: $themecolor;
+    span {
+      float: right;
+      cursor: pointer;
+      font-size: 11px;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+  .r-panel-body {
+    height:100%;
+    position: absolute;
+    width: 100%;
+    padding-bottom: 40px;  
+    ul {
+      margin: 0px;
+      padding: 0px 20px;
+      li {
+        list-style: none;
+        padding: 5px 0;
+      }
+    }
+  }
+}
+
+.shw-rside {
+  right: 0px;
+  width: 240px;
+  display: block;
+}
+
+
+
+
+/*******************
+ Footer
+*******************/
+
+.footer {
+  bottom: 0;
+  color: $bodytext;
+  left: 0px;
+  padding: 17px 15px;
+  position: absolute;
+  right: 0;
+  border-top: 1px solid $border;
+  background: $white;
+}
+
+
+
+/*******************
+ Card title
+*******************/
+
+.card {
+  margin-bottom: 30px;
+  .card-subtitle {
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: $muted;
+  }
+}
+
+.card-inverse .card-bodyquote .blockquote-footer,
+.card-inverse .card-link,
+.card-inverse .card-subtitle,
+.card-inverse .card-text {
+  color: rgba(255, 255, 255, .65);
+}
+html body .card{
+&.card-success {
+  background: $success;
+  border-color: $success;
+}
+
+&.card-danger {
+  background: $danger;
+  border-color: $danger;
+}
+
+&.card-warning {
+  background: $warning;
+  border-color: $warning;
+}
+
+&.card-info {
+  background: $info;
+  border-color: $info;
+}
+
+&.card-primary {
+  background: $primary;
+  border-color: $primary;
+}
+
+&.card-dark {
+  background: $inverse;
+  border-color: $inverse;
+}
+
+&.card-megna {
+  background: $megna;
+  border-color: $megna;
+}
+}
+/*============================================================== 
+ Cards page
+ ============================================================== */
+
+.card-actions {
+  float: $rgt;
+  a {
+    cursor: pointer;
+    color: $bodytext;
+    opacity: 0.7;
+    padding-left: 7px;
+    font-size: 13px;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.card-columns .card {
+  margin-bottom: 20px;
+}
+
+.collapsing {
+  -webkit-transition: height .08s ease;
+  transition: height .08s ease;
+}
+
+.card-info {
+  background: $info;
+  border-color: $info;
+}
+
+.card-primary {
+  background: $primary;
+  border-color: $primary;
+}
+
+.card-outline-info {
+  border-color: $info;
+  .card-header {
+    background: $info;
+    border-color: $info;
+  }
+}
+
+.card-outline-inverse {
+  border-color: $inverse;
+  .card-header {
+    background: $inverse;
+    border-color: $inverse;
+  }
+}
+
+.card-outline-warning {
+  border-color: $warning;
+  .card-header {
+    background: $warning;
+    border-color: $warning;
+  }
+}
+
+.card-outline-success {
+  border-color: $success;
+  .card-header {
+    background: $success;
+    border-color: $success;
+  }
+}
+
+.card-outline-danger {
+  border-color: $danger;
+  .card-header {
+    background: $danger;
+    border-color: $danger;
+  }
+}
+
+.card-outline-primary {
+  border-color: $primary;
+  .card-header {
+    background: $primary;
+    border-color: $primary;
+  }
+}
+
+/*============================================================== 
+ Buttons page
+ ============================================================== */
+
+.button-group {
+  .btn {
+    margin-bottom: 5px;
+    margin-right: 5px;
+  }
+}
+
+.no-button-group {
+  .btn {
+    margin-bottom: 5px;
+    margin-right: 0px;
+  }
+}
+
+.btn {
+  .text-active {
+    display: none;
+  }
+  &.active .text-active {
+    display: inline-block;
+  }
+  &.active .text {
+    display: none;
+  }
+}
+
+
+/*============================================================== 
+Breadcrumb
+ ============================================================== */
+
+.bc-colored {
+  .breadcrumb-item,
+  .breadcrumb-item a {
+    color: $white;
+    &.active {
+      opacity: 0.7;
+    }
+  }
+  .breadcrumb-item+.breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.breadcrumb {
+  margin-bottom: 0px;
+}
+
+
+
+/*============================================================== 
+ Ui-bootstrap
+ ============================================================== */
+
+ul.list-icons {
+  margin: 0px;
+  padding: 0px;
+  li {
+    list-style: none;
+    line-height: 30px;
+    margin: 5px 0;
+    transition: 0.2s ease-in;
+    a {
+      color: $bodytext;
+      &:hover {
+        color: $themecolor;
+      }
+    }
+    i {
+      font-size: 13px;
+      padding-right: 8px;
+    }
+  }
+}
+
+ul.list-inline {
+  li {
+    display: inline-block;
+    padding: 0 8px;
+  }
+}
+
+ul.two-part {
+  margin: 0px;
+  li {
+    width: 48.8%;
+  }
+}
+
+
+
+/*Accordion*/
+
+html body .accordion {
+  .card {
+    margin-bottom: 0px;
+  }
+}
+
+
+
+/*============================================================== 
+ sparkline chart
+ ============================================================== */
+html body {
+  .jqstooltip,
+  .flotTip {
+    width: auto!important;
+    height: auto!important;
+    background: $dark;
+    color: $white;
+    padding: 5px 10px;
+  }
+}
+
+body .jqstooltip {
+  border-color: transparent;
+  border-radius: 60px;
+}
+
+
+
+
+
+
+
+/*============================================================== 
+Dashboard1 chart
+ ============================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************
+Pagination
+******************/
+
+.pagination-circle {
+  li.active a {
+    background: $success;
+  }
+  li a {
+    width: 40px;
+    height: 40px;
+    background: $light;
+    border: 0px;
+    text-align: center;
+    border-radius: 100%;
+    &:first-child,
+    &:last-child {
+      border-radius: 100%;
+    }
+    &:hover {
+      background: $success;
+      color: $white;
+    }
+  }
+  li.disabled a {
+    background: $light;
+    color: $border;
+  }
+}
+
+
+
+
+/*******************
+Table-Layout
+******************/
+
+.table thead th,
+.table th {
+  border: 0px;
+}
+
+.color-table.primary-table thead th {
+  background-color: $primary;
+  color: $white;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background: $light;
+}
+
+.color-table.success-table thead th {
+  background-color: $success;
+  color: $white;
+}
+
+.color-table.info-table thead th {
+  background-color: $info;
+  color: $white;
+}
+
+.color-table.warning-table thead th {
+  background-color: $warning;
+  color: $white;
+}
+
+.color-table.danger-table thead th {
+  background-color: $danger;
+  color: $white;
+}
+
+.color-table.inverse-table thead th {
+  background-color: $inverse;
+  color: $white;
+}
+
+.color-table.dark-table thead th {
+  background-color: $dark;
+  color: $white;
+}
+
+.color-table.red-table thead th {
+  background-color: $red;
+  color: $white;
+}
+
+.color-table.purple-table thead th {
+  background-color: $purple;
+  color: $white;
+}
+
+.color-table.muted-table thead th {
+  background-color: $muted;
+  color: $white;
+}
+
+.color-bordered-table.primary-bordered-table {
+  border: 2px solid $primary;
+  thead th {
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+.color-bordered-table.success-bordered-table {
+  border: 2px solid $success;
+  thead th {
+    background-color: $success;
+    color: $white;
+  }
+}
+
+.color-bordered-table.info-bordered-table {
+  border: 2px solid $info;
+  thead th {
+    background-color: $info;
+    color: $white;
+  }
+}
+
+.color-bordered-table.warning-bordered-table {
+  border: 2px solid $warning;
+  thead th {
+    background-color: $warning;
+    color: $white;
+  }
+}
+
+.color-bordered-table.danger-bordered-table {
+  border: 2px solid $danger;
+  thead th {
+    background-color: $danger;
+    color: $white;
+  }
+}
+
+.color-bordered-table.inverse-bordered-table {
+  border: 2px solid $inverse;
+  thead th {
+    background-color: $inverse;
+    color: $white;
+  }
+}
+
+.color-bordered-table.dark-bordered-table {
+  border: 2px solid $dark;
+  thead th {
+    background-color: $dark;
+    color: $white;
+  }
+}
+
+.color-bordered-table.red-bordered-table {
+  border: 2px solid $red;
+  thead th {
+    background-color: $red;
+    color: $white;
+  }
+}
+
+.color-bordered-table.purple-bordered-table {
+  border: 2px solid $purple;
+  thead th {
+    background-color: $purple;
+    color: $white;
+  }
+}
+
+.color-bordered-table.muted-bordered-table {
+  border: 2px solid $muted;
+  thead th {
+    background-color: $muted;
+    color: $white;
+  }
+}
+
+.full-color-table.full-primary-table {
+  background-color: $light-primary;
+  thead th {
+    background-color: $primary;
+    border: 0;
+    color: $white;
+  }
+  tbody td {
+    border: 0;
+  }
+  tr:hover {
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+.full-color-table.full-success-table {
+  background-color: $light-success;
+  thead th {
+    background-color: $success;
+    border: 0;
+    color: $white;
+  }
+  tbody td {
+    border: 0;
+  }
+  tr:hover {
+    background-color: $success;
+    color: $white;
+  }
+}
+
+.full-color-table.full-info-table {
+  background-color: $light-info;
+  thead th {
+    background-color: $info;
+    border: 0;
+    color: $white;
+  }
+  tbody td {
+    border: 0;
+  }
+  tr:hover {
+    background-color: $info;
+    color: $white;
+  }
+}
+
+.full-color-table.full-warning-table {
+  background-color: $light-warning;
+  thead th {
+    background-color: $warning;
+    border: 0;
+    color: $white;
+  }
+  tbody td {
+    border: 0;
+  }
+  tr:hover {
+    background-color: $warning;
+    color: $white;
+  }
+}
+
+.full-color-table.full-danger-table {
+  background-color: $light-danger;
+  thead th {
+    background-color: $danger;
+    border: 0;
+    color: $white;
+  }
+  tbody td {
+    border: 0;
+  }
+  tr:hover {
+    background-color: $danger;
+    color: $white;
+  }
+}
+
+.full-color-table.full-inverse-table {
+  background-color: $light-inverse;
+  thead th {
+    background-color: $inverse;
+    border: 0;
+    color: $white;
+  }
+  tbody td {
+    border: 0;
+  }
+  tr:hover {
+    background-color: $inverse;
+    color: $white;
+  }
+}
+
+.full-color-table.full-dark-table {
+  background-color: rgba(43, 43, 43, .8);
+  thead th {
+    background-color: $dark;
+    border: 0;
+    color: $white;
+  }
+  tbody td {
+    border: 0;
+    color: $white;
+  }
+  tr:hover {
+    background-color: $dark;
+    color: $white;
+  }
+}
+
+.full-color-table.full-red-table {
+  background-color: $light-danger;
+  thead th {
+    background-color: $red;
+    border: 0;
+    color: $white;
+  }
+  tbody td {
+    border: 0;
+  }
+  tr:hover {
+    background-color: $red;
+    color: $white;
+  }
+}
+
+.full-color-table.full-purple-table {
+  background-color: $light-primary;
+  thead th {
+    background-color: $purple;
+    border: 0;
+    color: $white;
+  }
+  tbody td {
+    border: 0;
+  }
+  tr:hover {
+    background-color: $purple;
+    color: $white;
+  }
+}
+
+.full-color-table.full-muted-table {
+  background-color: rgba(152, 166, 173, .2);
+  thead th {
+    background-color: $muted;
+    border: 0;
+    color: $white;
+  }
+  tbody td {
+    border: 0;
+  }
+  tr:hover {
+    background-color: $muted;
+    color: $white;
+  }
+}
+
+
+
+
+
+/*******************
+Table- editable table
+******************/
+
+.dt-bootstrap {
+  display: block;
+}
+
+.paging_simple_numbers {
+  .pagination {
+    .paginate_button {
+      padding: 0px;
+      background: $white;
+      &:hover {
+        background: $white;
+      }
+      a {
+        padding: 2px 10px;
+        border: 0px;
+      }
+      &.active a,
+      &:hover a {
+        background: $info;
+        color: $white;
+      }
+    }
+  }
+}
+
+
+/*******************
+Icon list fontawesom
+******************/
+
+.icon-list-demo {
+  div {
+    cursor: pointer;
+    line-height: 60px;
+    white-space: nowrap;
+    color: $bodytext;
+    &:hover {
+      color: $dark;
+    }
+    p {
+      margin: 10px 0;
+      padding: 5px 0;
+    }
+  }
+  i {
+    -webkit-transition: all 0.2s;
+    -webkit-transition: font-size .2s;
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 15px 0 10px;
+    text-align: left;
+    transition: all 0.2s;
+    transition: font-size .2s;
+    vertical-align: middle;
+    transition: all 0.3s ease 0s;
+  }
+  .col-md-4,
+  .col-3 {
+    border-radius: $radius;
+    &:hover {
+      background-color: $extra-light;
+    }
+  }
+}
+
+.icon-list-demo .div:hover i {
+  font-size: 2em;
+}
+
+
+
+/*******************
+Icon list material icon
+******************/
+
+.material-icon-list-demo .mdi {
+  font-size: 21px;
+}
+
+
+
+
+/*******************
+list and media
+******************/
+
+.list-group a.list-group-item:hover {
+  background: $light;
+}
+
+.list-group-item.active,
+.list-group .list-group-item.active:hover {
+  background: $themecolor;
+  border-color: $themecolor;
+}
+
+.list-group-item.disabled {
+  color: $muted;
+  background: $light;
+}
+
+.media {
+  border: 1px solid $border;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+
+
+/*******************
+Timeline page
+******************/
+
+.timeline {
+  position: relative;
+  padding: 20px 0 20px;
+  list-style: none;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  margin-left: -1.5px;
+  background-color: $light;
+}
+
+.timeline>li {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.timeline>li:before,
+.timeline>li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline>li:after {
+  clear: both;
+}
+
+.timeline>li:before,
+.timeline>li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline>li:after {
+  clear: both;
+}
+
+.timeline>li>.timeline-panel {
+  float: left;
+  position: relative;
+  width: 46%;
+  padding: 20px;
+  border: 1px solid $border;
+  border-radius: $radius;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+.timeline>li>.timeline-panel:before {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  top: 26px;
+  right: -8px;
+  border-top: 8px solid transparent;
+  border-right: 0 solid $border;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid $border;
+}
+
+.timeline>li>.timeline-panel:after {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  top: 27px;
+  right: -7px;
+  border-top: 7px solid transparent;
+  border-right: 0 solid $white;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid $white;
+}
+
+.timeline>li>.timeline-badge {
+  z-index: 10;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  border-radius: 50% 50% 50% 50%;
+  text-align: center;
+  font-size: 1.4em;
+  line-height: 50px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel {
+  float: right;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:before {
+  right: auto;
+  left: -8px;
+  border-right-width: 8px;
+  border-left-width: 0;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:after {
+  right: auto;
+  left: -7px;
+  border-right-width: 7px;
+  border-left-width: 0;
+}
+
+.timeline-badge.primary {
+  background-color: $primary;
+}
+
+.timeline-badge.success {
+  background-color: $success;
+}
+
+.timeline-badge.warning {
+  background-color: $warning;
+}
+
+.timeline-badge.danger {
+  background-color: $danger;
+}
+
+.timeline-badge.info {
+  background-color: $info;
+}
+
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+  font-weight: 400;
+}
+
+.timeline-body>p,
+.timeline-body>ul {
+  margin-bottom: 0;
+}
+
+.timeline-body>p+p {
+  margin-top: 5px;
+}
+
+
+
+
+/*******************
+Error Page
+******************/
+
+.error-box {
+  height: 100%;
+  position: fixed;
+  background: url(../../assets/images/background/error-bg.jpg) no-repeat center center #fff;
+  width: 100%;
+  .footer {
+    width: 100%;
+    left: 0px;
+    right: 0px;
+  }
+}
+
+.error-body {
+  padding-top: 5%;
+  h1 {
+    font-size: 210px;
+    font-weight: 900;
+    line-height: 210px;
+  }
+}
+
+
+
+
+
+/*******************
+Login register and recover password Page
+******************/
+
+.login-register {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+  padding: 5% 0;
+  position: fixed;
+}
+
+.login-box {
+  width: 400px;
+  margin: 0 auto;
+  .footer {
+    width: 100%;
+    left: 0px;
+    right: 0px;
+  }
+  .social {
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+
+#recoverform {
+  display: none;
+}
+
+.login-sidebar {
+  padding: 0px;
+  margin-top: 0px;
+  .login-box {
+    right: 0px;
+    position: absolute;
+    height: 100%;
+  }
+}
+
+
+
+
+/*******************
+Pricing Page
+******************/
+
+.pricing-box {
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.featured-plan {
+  margin-top: 0px;
+  .pricing-body {
+    padding: 60px 0;
+    background: $extra-light;
+    border: 1px solid #ddd;
+  }
+  .price-table-content .price-row {
+    border-top: 1px solid rgba(120, 130, 140, 0.13);
+  }
+}
+
+.pricing-body {
+  border-radius: 0px;
+  border-top: 1px solid rgba(120, 130, 140, 0.13);
+  border-bottom: 5px solid rgba(120, 130, 140, 0.13);
+  vertical-align: middle;
+  padding: 30px 0;
+  position: relative;
+}
+
+.pricing-body h2 {
+  position: relative;
+  font-size: 56px;
+  margin: 20px 0 10px;
+  font-weight: 500;
+  span {
+    position: absolute;
+    font-size: 15px;
+    top: -10px;
+    margin-left: -10px
+  }
+}
+
+.price-table-content {
+  .price-row {
+    padding: 20px 0;
+    border-top: 1px solid rgba(120, 130, 140, 0.13);
+  }
+}
+
+.pricing-plan {
+  padding: 0 15px;
+  .no-padding {
+    padding: 0px;
+  }
+}
+
+.price-lable {
+  position: absolute;
+  top: -10px;
+  padding: 5px 10px;
+  margin: 0 auto;
+  display: inline-block;
+  width: 100px;
+  left: 0px;
+  right: 0px;
+}
+
+
+
+
+
+
+
+/*Documentation page*/
+
+.plugin-details {
+  display: none;
+}
+
+.plugin-details-active {
+  display: block;
+}
+
+.earning-box {
+  h6 {
+    font-weight: 500;
+    margin-bottom: 0px;
+    white-space: nowrap;
+  }
+  td,
+  th {
+    vertical-align: middle;
+  }
+}
+
+
+.btn-link{
+  border:0px;
+}
+/*******************
+Smart table
+******************/
+.smart-table tr td, .smart-table tr th{
+    padding:15px!important;
+}
+.ng2-smart-action-add-add{
+   color:$white!important;
+   background: $themecolor;
+   padding: 8px 15px;    
+   border-radius: $radius;    
+}
+.ng2-smart-pagination-nav{
+    margin-left: auto;
+}
+.ng2-smart-pagination-nav .pagination > li > a {
+    line-height: 1rem;
+} 
+
+/*******************
+NGX Data table
+******************/
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+.ngx-datatable.material {
+ box-shadow:none!important;
+    border:1px solid $border;
+}
+
+/*******************
+Chartistt chart css
+******************/
+.barchrt{
+    .ct-series-a .ct-bar{
+        stroke:$success;
+    }
+    .ct-series-b .ct-bar{
+        stroke:$info;
+    }
+}
+
+.linearea {
+  height: 280px;
+  .ct-series-a .ct-area {
+    fill-opacity: 0.05;
+    fill: $success;
+  }
+  .ct-series-a .ct-line,
+  .ct-series-a .ct-point {
+    stroke: $success;
+    stroke-width: 2px;
+  }
+  .ct-series-b .ct-area {
+    fill: $info;
+    fill-opacity: 0.1;
+  }
+  .ct-series-b .ct-line,
+  .ct-series-b .ct-point {
+    stroke: $info;
+    stroke-width: 2px;
+  }
+  .ct-series-c .ct-area {
+    fill: $danger;
+    fill-opacity: 0.1;
+  }
+  .ct-series-c .ct-line,
+  .ct-series-c .ct-point {
+    stroke: $danger;
+    stroke-width: 2px;
+  }
+  .ct-series-a .ct-point,
+  .ct-series-b .ct-point,
+  .ct-series-c .ct-point{
+    stroke-width: 6px;
+  }
+}
+.piechart{
+    .ct-series-a .ct-slice-donut{
+        stroke:$info
+    }
+    .ct-series-b .ct-slice-donut{
+        stroke:$success
+    }
+    .ct-series-c .ct-slice-donut{
+        stroke:$inverse
+    }
+    .ct-series-d .ct-slice-donut{
+        stroke:$danger
+    }
+    .ct-series-e .ct-slice-donut{
+        stroke:$warning
+    }
+}
+
+/*******************
+Taskboard scss
+******************/
+.taskboard {
+  overflow-x: auto;
+  overflow-y: auto;
+  white-space: nowrap;
+  padding: 8px;
+  .taskboard-wrapper {
+    width: 280px;
+    padding-right: 8px;
+    padding-left: 8px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  .taskboard-list {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    white-space: normal;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 0;
+  }
+  .taskboard-header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
+    padding: 8px 8px 0;
+  }
+  .taskboard-task {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    margin-bottom: 8px;
+    background: $white;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      cursor: grab;
+    }
+  }
+  .taskboard-task:after {
+    content: "";
+    position: absolute;
+    border: 4px solid transparent;
+    top: 0;
+    border-top-width: 12px;
+    border-bottom-color: transparent;
+    right: 6px;
+  }
+  .taskboard-task.task-status-success:after {
+    border-top-color: $success;
+    border-right-color: $success;
+    border-left-color: $success;
+  }
+  .taskboard-task.task-status-info:after {
+    border-top-color: $info;
+    border-right-color: $info;
+    border-left-color: $info;
+  }
+  .taskboard-task.task-status-warning:after {
+    border-top-color: $warning;
+    border-right-color: $warning;
+    border-left-color: $warning;
+  }
+  .taskboard-task.task-status-danger:after {
+    border-top-color: $danger;
+    border-right-color: $danger;
+    border-left-color: $danger;
+  }
+  .taskboard-cards {
+    padding: 8px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .taskboard-task-title {
+    margin-bottom: 8px;
+  }
+}
+
+/*******************/
+/*Activity widgets*/
+/*******************/
+
+.activity-box{
+    .date-devider{
+        border-top:2px solid $border;
+        position:relative;
+        span{
+            background:$light;
+            padding:5px 15px;
+            border-radius:60px;
+            font-size:14px;
+            top:-15px;
+            position:relative;
+            margin-left:20px;
+        }
+    }
+    .activity-item{
+        display:flex;
+        margin-bottom:30px;
+        .image-list{
+            > a{
+                margin-left:-15px;
+                position:relative;
+                vertical-align:middle;
+                
+                &:first-child, &:last-child{
+                    margin-left:0px;
+                }
+                &:hover{
+                    z-index:10;
+                    img{box-shadow:0 2px 15px rgba(0, 0, 0, 0.2);}
+                }
+            }
+        }
+    }
+}

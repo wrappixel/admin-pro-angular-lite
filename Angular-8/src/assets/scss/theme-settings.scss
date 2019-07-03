@@ -1,0 +1,47 @@
+/*******************
+This is for the minisidebar
+******************/
+
+.mini-sidebar .top-navbar {
+    .navbar-header {
+        width: 70px;
+        text-align: center;
+    }
+}
+
+
+/****************
+When click on sidebar toggler and also for tablet
+*****************/
+.mini-sidebar {
+    .navbar-brand span{
+        display: none;
+    }
+}
+
+
+@media(max-width:1167px) {
+    .mini-sidebar {
+            .left-sidebar,
+            .sidebar-footer {
+                left: -240px;
+            }
+        
+    }
+}
+
+
+/*******************
+This is for the Logo in center
+******************/
+
+.logo-center {
+    .top-navbar {
+        .navbar-header {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+    }
+}
