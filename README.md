@@ -1,15 +1,13 @@
-# AdminAngular
-<a href="https://wrappixel.com">
-<img src="https://wrappixel.com/wp-content/uploads/2017/03/wp-updated-logo.jpg" /></a>
-<br/>
+# adminpro-admin-angular-lite 7 and 8
 
-<a href="https://wrappixel.com/templates/adminpro-angular-dashboard/">
-<img src="https://wrappixel.com/demos/images/admin-pro-angular-v-promotion.jpg"/></a><br/>
+<h4><a href="https://wrappixel.com/demos/angular-admin-templates/admin-pro-angular-lite/angular/component/cards">Free Version Demo Link</a></h4>
 
+## Pro Version
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
-<h4>Check this Repo Live Demo</h4>
-<h3><a href="https://wrappixel.com/demos/angular-admin-templates/admin-pro-angular-lite/">Demo</a></h3>
+<a href="https://www.wrappixel.com/templates/adminpro-angular-dashboard/"><img src="https://www.wrappixel.com/wp-content/uploads/2019/01/adminpro-angular-nw-1.jpg"/></a><br/>
+
+<h4><a href="https://wrappixel.com/demos/angular-admin-templates/admin-pro-angular/main/dashboard/dashboard1">Demo</a></h4>
+
 
 ## Development server
 
@@ -21,7 +19,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
