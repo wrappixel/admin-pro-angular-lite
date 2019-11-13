@@ -5,23 +5,23 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FullComponent } from './layouts/full/full.component';
 
 export const Approutes: Routes = [
-  {
-    path: '',
-    component: FullComponent,
-    children: [
-      { path: '', redirectTo: '/starter', pathMatch: 'full' },
-      {
-        path: 'starter',
-        loadChildren: () => import('./starter/starter.module').then(m => m.StarterModule)
-      },
-      {
-        path: 'component',
-        loadChildren: () => import('./component/component.module').then(m => m.ComponentsModule)
-      }
-    ]
-  },
-  {
-    path: '**',
-    redirectTo: '/starter'
-  }
+    {
+        path: '',
+        component: FullComponent,
+        children: [
+            { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+            {
+                path: 'dashboard',
+                loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+            },
+            {
+                path: 'component',
+                loadChildren: () => import('./component/component.module').then(m => m.ComponentsModule)
+            }
+        ]
+    },
+    {
+        path: '**',
+        redirectTo: '/dashboard'
+    }
 ];

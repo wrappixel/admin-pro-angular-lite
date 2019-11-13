@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
+import { ChartsModule } from 'ng2-charts';
 
 import { FullComponent } from './layouts/full/full.component';
 
@@ -21,36 +22,37 @@ import { AppComponent } from './app.component';
 import { SpinnerComponent } from './shared/spinner.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-  suppressScrollX: true,
-  wheelSpeed: 2,
-  wheelPropagation: true
+    suppressScrollX: true,
+    wheelSpeed: 2,
+    wheelPropagation: true
 };
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SpinnerComponent,
-    FullComponent,
-    NavigationComponent,
-    BreadcrumbComponent,
-    SidebarComponent
-  ],
-  imports: [
-    CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    HttpClientModule,
-    NgbModule.forRoot(),
-    RouterModule.forRoot(Approutes),
-    PerfectScrollbarModule
-  ],
-  providers: [
-    {
-      provide: PERFECT_SCROLLBAR_CONFIG,
-      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-    }
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        SpinnerComponent,
+        FullComponent,
+        NavigationComponent,
+        BreadcrumbComponent,
+        SidebarComponent
+    ],
+    imports: [
+        CommonModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        HttpClientModule,
+        NgbModule.forRoot(),
+        RouterModule.forRoot(Approutes),
+        PerfectScrollbarModule,
+        ChartsModule
+    ],
+    providers: [
+        {
+            provide: PERFECT_SCROLLBAR_CONFIG,
+            useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+        }
+    ],
+    bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
