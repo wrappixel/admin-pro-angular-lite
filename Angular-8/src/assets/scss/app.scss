@@ -1,24 +1,9 @@
 /*
-Template Name: Admin Press Admin
+Template Name: Admin Pro Admin
 Author: Themedesigner
 Email: niravjoshi87@gmail.com
 File: scss
 */
-
-
-/**
- * Table Of Content
- *
- *  1. Globals
- *  2. Headers
- *  3. Navigations
- *  4. Banners
- *  5. Footers
- *  6. Posts
- *  7. Widgets
- *  8. Custom Templates
- */
-
 
 /******************* 
 Global Styles 
@@ -26,7 +11,6 @@ Global Styles
 
 * {
     outline: none;
-    
 }
 
 body {
@@ -77,10 +61,6 @@ html body .mdi:before,
 html body .mdi-set {
     line-height: initial;
 }
-
-
-
-
 
 /*******************
 Headings
@@ -159,19 +139,6 @@ html body {
 }
 
 /*******************
-Opacity
-*******************/
-
-.op-5 {
-    opacity: 0.5;
-}
-.op-3 {
-    opacity: 0.3;
-}
-
-
-
-/*******************
 Blockquote
 *******************/
 
@@ -180,17 +147,6 @@ html body blockquote {
     border: 1px solid $border;
     padding: 15px;
 }
-
-.clear {
-    clear: both;
-}
-
-ol li {
-    margin: 5px 0;
-}
-
-
-
 
 
 /*******************
@@ -405,44 +361,6 @@ html body {
     }
 }
 
-
-
-
-
-/*******************
-vertical alignment
-*******************/
-
-html body {
-    .vt {
-        vertical-align: top;
-    }
-
-    .vm {
-        vertical-align: middle;
-    }
-
-    .vb {
-        vertical-align: bottom;
-    }
-}
-
-
-
-
-
-/*******************
-Opacity
-*******************/
-
-.op-5 {
-    opacity: 0.5;
-}
-
-
-
-
-
 /*******************
 font weight
 *******************/
@@ -479,10 +397,6 @@ html body {
     }
 }
 
-
-
-
-
 /*******************
 Border
 *******************/
@@ -509,27 +423,6 @@ html body {
 }
 
 
-
-
-
-/*******************
-Thumb size
-*******************/
-
-.thumb-sm {
-    height: 32px;
-    width: 32px;
-}
-
-.thumb-md {
-    height: 48px;
-    width: 48px;
-}
-
-.thumb-lg {
-    height: 88px;
-    width: 88px;
-}
 
 .hide {
     display: none;
@@ -734,115 +627,6 @@ Rounds
     background: $primary;
 }
 
-
-
-
-
-/*******************
-Labels
-*******************/
-
-.label {
-    padding: 3px 10px;
-    line-height: 13px;
-    color: $white;
-    font-weight: 400;
-    border-radius: $radius;
-    font-size: 75%;
-}
-
-.label-rounded {
-    border-radius: 60px;
-}
-
-.label-custom {
-    background-color: $megna;
-}
-
-.label-success {
-    background-color: $success;
-}
-
-.label-info {
-    background-color: $info;
-}
-
-.label-warning {
-    background-color: $warning;
-}
-
-.label-danger {
-    background-color: $danger;
-}
-
-.label-megna {
-    background-color: $megna;
-}
-
-.label-primary {
-    background-color: $primary;
-}
-
-.label-purple {
-    background-color: $purple;
-}
-
-.label-red {
-    background-color: $red;
-}
-
-.label-inverse {
-    background-color: $inverse;
-}
-
-.label-default {
-    background-color: $light;
-}
-
-.label-white {
-    background-color: $white;
-}
-
-
-.label-light-success {
-    background-color: $light-success;
-    color: $success;
-}
-
-.label-light-info {
-    background-color: $light-info;
-    color: $info;
-}
-
-.label-light-warning {
-    background-color: $light-warning;
-    color: $warning;
-}
-
-.label-light-danger {
-    background-color: $light-danger;
-    color: $danger;
-}
-
-.label-light-megna {
-    background-color: $light-megna;
-    color: $megna;
-}
-
-.label-light-primary {
-    background-color: $light-primary;
-    color: $primary;
-}
-
-.label-light-inverse {
-    background-color: $light-inverse;
-    color: $inverse;
-}
-
-
-
-
-
 /*******************
 Pagination
 *******************/
@@ -946,10 +730,6 @@ Table Cell
     background: $light;
 }
 
-.nowrap {
-    white-space: nowrap;
-}
-
 .lite-padding td {
     padding: 5px;
 }
@@ -967,142 +747,6 @@ Table Cell
     overflow-x: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
-
-
-
-
-
-/*******************
-Wave Effects
-*******************/
-
-.waves-effect {
-    position: relative;
-    cursor: pointer;
-    display: inline-block;
-    overflow: hidden;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    vertical-align: middle;
-    z-index: 1;
-    will-change: opacity, transform;
-    -webkit-transition: all 0.1s ease-out;
-    -moz-transition: all 0.1s ease-out;
-    -o-transition: all 0.1s ease-out;
-    -ms-transition: all 0.1s ease-out;
-    transition: all 0.1s ease-out;
-    .waves-ripple {
-        position: absolute;
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-        margin-top: -10px;
-        margin-left: -10px;
-        opacity: 0;
-        background: rgba(0, 0, 0, 0.2);
-        -webkit-transition: all 0.7s ease-out;
-        -moz-transition: all 0.7s ease-out;
-        -o-transition: all 0.7s ease-out;
-        -ms-transition: all 0.7s ease-out;
-        transition: all 0.7s ease-out;
-        -webkit-transition-property: -webkit-transform, opacity;
-        -moz-transition-property: -moz-transform, opacity;
-        -o-transition-property: -o-transform, opacity;
-        transition-property: transform, opacity;
-        -webkit-transform: scale(0);
-        -moz-transform: scale(0);
-        -ms-transform: scale(0);
-        -o-transform: scale(0);
-        transform: scale(0);
-        pointer-events: none;
-    }
-}
-
-.waves-effect.waves-light {
-    .waves-ripple {
-        background-color: rgba(255, 255, 255, 0.45);
-    }
-}
-
-.waves-effect.waves-red {
-    .waves-ripple {
-        background-color: rgba(244, 67, 54, 0.7);
-    }
-}
-
-.waves-effect.waves-yellow {
-    .waves-ripple {
-        background-color: rgba(255, 235, 59, 0.7);
-    }
-}
-
-.waves-effect.waves-orange {
-    .waves-ripple {
-        background-color: rgba(255, 152, 0, 0.7);
-    }
-}
-
-.waves-effect.waves-purple {
-    .waves-ripple {
-        background-color: rgba(156, 39, 176, 0.7);
-    }
-}
-
-.waves-effect.waves-green {
-    .waves-ripple {
-        background-color: rgba(76, 175, 80, 0.7);
-    }
-}
-
-.waves-effect.waves-teal {
-    .waves-ripple {
-        background-color: rgba(0, 150, 136, 0.7);
-    }
-}
-
-html body .waves-notransition {
-    -webkit-transition: none;
-    -moz-transition: none;
-    -o-transition: none;
-    -ms-transition: none;
-    transition: none;
-}
-
-.waves-circle {
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-    text-align: center;
-    width: 2.5em;
-    height: 2.5em;
-    line-height: 2.5em;
-    border-radius: 50%;
-    -webkit-mask-image: none;
-}
-
-.waves-input-wrapper {
-    border-radius: 0.2em;
-    vertical-align: bottom;
-    .waves-button-input {
-        position: relative;
-        top: 0;
-        left: 0;
-        z-index: 1;
-    }
-}
-
-.waves-block {
-    display: block;
-}
-
-
-
-
 
 /*Badge*/
 
@@ -1153,11 +797,6 @@ html body .waves-notransition {
 .badge-inverse {
     background-color: $inverse;
 }
-
-
-
-
-
 
 /*******************
 Buttons
@@ -1768,151 +1407,6 @@ Buttons
 }
 
 /*******************
-Notify
-*******************/
-
-.notify {
-    position: relative;
-    top: -22px;
-    right: -9px;
-    .heartbit {
-        position: absolute;
-        top: -20px;
-        right: -4px;
-        height: 25px;
-        width: 25px;
-        z-index: 10;
-        border: 5px solid $danger;
-        border-radius: 70px;
-        -moz-animation: heartbit 1s ease-out;
-        -moz-animation-iteration-count: infinite;
-        -o-animation: heartbit 1s ease-out;
-        -o-animation-iteration-count: infinite;
-        -webkit-animation: heartbit 1s ease-out;
-        -webkit-animation-iteration-count: infinite;
-        animation-iteration-count: infinite;
-    }
-    .point {
-        width: 6px;
-        height: 6px;
-        -webkit-border-radius: 30px;
-        -moz-border-radius: 30px;
-        border-radius: 30px;
-        background-color: $danger;
-        position: absolute;
-        right: 6px;
-        top: -10px;
-    }
-}
-
-@-moz-keyframes heartbit {
-    0% {
-        -moz-transform: scale(0);
-        opacity: 0.0;
-    }
-    25% {
-        -moz-transform: scale(0.1);
-        opacity: 0.1;
-    }
-    50% {
-        -moz-transform: scale(0.5);
-        opacity: 0.3;
-    }
-    75% {
-        -moz-transform: scale(0.8);
-        opacity: 0.5;
-    }
-    100% {
-        -moz-transform: scale(1);
-        opacity: 0.0;
-    }
-}
-
-@-webkit-keyframes heartbit {
-    0% {
-        -webkit-transform: scale(0);
-        opacity: 0.0;
-    }
-    25% {
-        -webkit-transform: scale(0.1);
-        opacity: 0.1;
-    }
-    50% {
-        -webkit-transform: scale(0.5);
-        opacity: 0.3;
-    }
-    75% {
-        -webkit-transform: scale(0.8);
-        opacity: 0.5;
-    }
-    100% {
-        -webkit-transform: scale(1);
-        opacity: 0.0;
-    }
-}
-
-/*******************
-File Upload 
-******************/
-
-.fileupload {
-    overflow: hidden;
-    position: relative;
-    input.upload {
-        cursor: pointer;
-        filter: alpha(opacity=0);
-        font-size: 20px;
-        margin: 0;
-        opacity: 0;
-        padding: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-}
-
-/*******************
-Megamenu
-******************/
-
-.mega-dropdown {
-    position: static!important;
-    width: 100%;
-    
-    .dropdown-menu {
-        width: 100%;
-        padding: 30px;
-        margin-top: 0px;
-        left:0px!important;
-    }
-    ul {
-        padding: 0px;
-
-        li {
-            list-style: none;
-        }
-    }
-    .carousel-item .container {
-        padding: 0px;
-    }
-    .nav-accordion {
-        .card {
-            margin-bottom: 1px;
-        }
-        .card-header {
-            background: $white;
-            h5 {
-                margin: 0px;
-                a {
-                    text-decoration: none;
-                    color: $bodytext;
-                }
-            }
-        }
-    }
-}
-
-/*******************
 List-style-none
 ******************/
 
@@ -1948,14 +1442,6 @@ Custom-select
 
 .custom-select {
     background: url(../../assets/images/custom-select.png) right .75rem center no-repeat;
-}
-
-/*******************
-textarea
-******************/
-
-textarea {
-    resize: none;
 }
 
 /*******************
@@ -2041,31 +1527,6 @@ Layouts
     height: 100%;
     z-index: 9999;
     overflow: auto;
-}
-
-/*******************/
-/*widgets -app*/
-/*******************/
-
-.css-bar:after {
-    z-index: 1;
-}
-
-.css-bar>i {
-    z-index: 10;
-}
-
-/*******************/
-/*single column*/
-/*******************/
-
-.single-column {
-    .left-sidebar {
-        display: none;
-    }
-    .page-wrapper {
-        margin-left: 0px;
-    }
 }
 
 .fix-width {

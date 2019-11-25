@@ -160,5 +160,15 @@ export const ROUTES: RouteInfo[] = [
         labelClass: '',
         extralink: false,
         submenu: []
+    },
+    {
+        path: '/component/toast',
+        title: 'Toast',
+        icon: 'mdi mdi-message-reply-text',
+        class: '',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: []
     }
 ];

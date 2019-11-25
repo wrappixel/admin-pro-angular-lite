@@ -74,4 +74,20 @@
   			</div>
         </div>
     </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Custom links <span class="badge badge-success">New</span></h3>
+                <h6 class="card-subtitle">A pagination with customized links:</h6>
+                <ngb-pagination [collectionSize]="70" [(page)]="pagecustom" aria-label="Custom pagination">
+                      <ng-template ngbPaginationPrevious>Prev</ng-template>
+                      <ng-template ngbPaginationNext>Next</ng-template>
+                      <ng-template ngbPaginationNumber let-p>{{ getPageSymbol(p) }}</ng-template>
+                </ngb-pagination>
+                    <hr>
+
+                    <pre>Current page: {{pagecustom}}</pre>
+            </div>
+        </div>
+    </div>
 </div>

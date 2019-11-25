@@ -20,7 +20,7 @@
     "@angular/platform-browser": "^8.1.0",
     "@angular/platform-browser-dynamic": "^8.1.0",
     "@angular/router": "^8.1.0",
-    "@ng-bootstrap/ng-bootstrap": "^3.3.1",
+    "@ng-bootstrap/ng-bootstrap": "^5.1.4",
     "@swimlane/ngx-datatable": "^13.0.0",
     "angular-calendar": "^0.22.1",
     "bootstrap": "^4.1.1",
