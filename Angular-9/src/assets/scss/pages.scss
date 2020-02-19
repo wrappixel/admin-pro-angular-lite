@@ -1,0 +1,431 @@
+/*
+Template Name: Admin Pro Admin
+Author: Themedesigner
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+
+@import 'variable';
+
+
+/*============================================================== 
+ For all pages 
+ ============================================================== */
+
+#main-wrapper {
+	width: 100%;
+}
+
+.page-wrapper {
+	background: $bodycolor;
+	padding-bottom: 60px;
+	height: calc(100vh - 64px); 
+	position: relative;
+		overflow: auto;
+}
+
+.container-fluid {
+	padding: 25px;
+}
+
+/*******************
+ Topbar
+*******************/
+
+.topbar {
+	position: relative;
+	z-index: 50;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+	.top-navbar {
+		min-height: 50px;
+		padding: 0px 15px 0 0;
+		.dropdown-toggle::after {
+			display: none;
+		}
+		.navbar-header {
+			line-height: 45px;
+			padding-left: 10px;
+			.navbar-brand {
+				margin-right: 0px;
+				padding-bottom: 0px;
+				padding-top: 0px;
+				.light-logo {
+					display: none;
+				}
+				b {
+					line-height: 60px;
+					display: inline-block;
+				}
+			}
+		}
+		.navbar-nav>.nav-item>.nav-link {
+			padding-left: .75rem;
+			padding-right: .75rem;
+			font-size: 15px;
+			line-height: 40px;
+		}
+		.navbar-nav>.nav-item.show {
+			background: $dark-transparent;
+		}
+	}
+	.profile-pic {
+		width: 30px;
+		border-radius: 100%;
+	}
+	.dropdown-menu {
+		box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+		-webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+		-moz-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+		border-color: $border;
+		.dropdown-item {
+			padding: 7px 1.5rem;
+		}
+	}
+	ul.dropdown-user {
+		padding: 0px;
+		min-width: 270px;
+		li {
+			list-style: none;
+			padding: 0px;
+			margin: 0px;
+			&.divider {
+				height: 1px;
+				margin: 9px 0;
+				overflow: hidden;
+				background-color: $border;
+			}
+			a {
+				padding: 9px 15px;
+				display: block;
+				color: $bodytext;
+				&:hover {
+					background: $light;
+					color: $themecolor;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+/*******************
+ Breadcrumb and page title
+*******************/
+
+.page-titles {
+	margin-bottom: 30px;
+	padding: 0px;
+}
+
+
+
+/*******************
+ Footer
+*******************/
+
+.footer {
+	bottom: 0;
+	color: $bodytext;
+	left: 0px;
+	padding: 17px 15px;
+	position: absolute;
+	right: 0;
+	border-top: 1px solid $border;
+	background: $white;
+}
+
+
+
+/*******************
+ Card title
+*******************/
+
+.card {
+	margin-bottom: 30px;
+	.card-subtitle {
+		font-weight: 300;
+		margin-bottom: 15px;
+		color: $muted;
+	}
+}
+
+.card-inverse .card-bodyquote .blockquote-footer,
+.card-inverse .card-link,
+.card-inverse .card-subtitle,
+.card-inverse .card-text {
+	color: rgba(255, 255, 255, .65);
+}
+html body .card{
+&.card-success {
+	background: $success;
+	border-color: $success;
+}
+
+&.card-danger {
+	background: $danger;
+	border-color: $danger;
+}
+
+&.card-warning {
+	background: $warning;
+	border-color: $warning;
+}
+
+&.card-info {
+	background: $info;
+	border-color: $info;
+}
+
+&.card-primary {
+	background: $primary;
+	border-color: $primary;
+}
+
+&.card-dark {
+	background: $inverse;
+	border-color: $inverse;
+}
+
+&.card-megna {
+	background: $megna;
+	border-color: $megna;
+}
+}
+/*============================================================== 
+ Cards page
+ ============================================================== */
+.collapsing {
+	-webkit-transition: height .08s ease;
+	transition: height .08s ease;
+}
+
+.card-info {
+	background: $info;
+	border-color: $info;
+}
+
+.card-primary {
+	background: $primary;
+	border-color: $primary;
+}
+
+.card-outline-info {
+	border-color: $info;
+	.card-header {
+		background: $info;
+		border-color: $info;
+	}
+}
+
+.card-outline-inverse {
+	border-color: $inverse;
+	.card-header {
+		background: $inverse;
+		border-color: $inverse;
+	}
+}
+
+.card-outline-warning {
+	border-color: $warning;
+	.card-header {
+		background: $warning;
+		border-color: $warning;
+	}
+}
+
+.card-outline-success {
+	border-color: $success;
+	.card-header {
+		background: $success;
+		border-color: $success;
+	}
+}
+
+.card-outline-danger {
+	border-color: $danger;
+	.card-header {
+		background: $danger;
+		border-color: $danger;
+	}
+}
+
+.card-outline-primary {
+	border-color: $primary;
+	.card-header {
+		background: $primary;
+		border-color: $primary;
+	}
+}
+
+/*============================================================== 
+ Buttons page
+ ============================================================== */
+
+.button-group {
+	.btn {
+		margin-bottom: 5px;
+		margin-right: 5px;
+	}
+}
+
+.no-button-group {
+	.btn {
+		margin-bottom: 5px;
+		margin-right: 0px;
+	}
+}
+
+.btn {
+	.text-active {
+		display: none;
+	}
+	&.active .text-active {
+		display: inline-block;
+	}
+	&.active .text {
+		display: none;
+	}
+}
+
+/*============================================================== 
+ Ui-bootstrap
+ ============================================================== */
+ul.list-inline {
+	li {
+		display: inline-block;
+		padding: 0 8px;
+	}
+}
+
+ul.two-part {
+	margin: 0px;
+	li {
+		width: 48.8%;
+	}
+}
+
+/*Accordion*/
+
+html body .accordion {
+	.card {
+		margin-bottom: 1px;
+	}
+}
+
+/*******************
+Table-Layout
+******************/
+
+.table thead th,
+.table th {
+	border: 0px;
+}
+
+/*******************
+Icon list material icon
+******************/
+
+.material-icon-list-demo .mdi {
+	font-size: 21px;
+}
+
+/*******************
+list and media
+******************/
+
+.list-group a.list-group-item:hover {
+	background: $light;
+}
+
+.list-group-item.active,
+.list-group .list-group-item.active:hover {
+	background: $themecolor;
+	border-color: $themecolor;
+}
+
+.list-group-item.disabled {
+	color: $muted;
+	background: $light;
+}
+
+.earning-box {
+	h6 {
+		font-weight: 500;
+		margin-bottom: 0px;
+		white-space: nowrap;
+	}
+	td,
+	th {
+		vertical-align: middle;
+	}
+}
+
+
+.btn-link{
+	border:0px;
+}
+
+/*******************
+Chartistt chart css
+******************/
+.barchrt{
+	.ct-series-a .ct-bar{
+			stroke:$success;
+	}
+	.ct-series-b .ct-bar{
+			stroke:$info;
+	}
+}
+
+.linearea {
+	height: 280px;
+	.ct-series-a .ct-area {
+		fill-opacity: 0.05;
+		fill: $success;
+	}
+	.ct-series-a .ct-line,
+	.ct-series-a .ct-point {
+		stroke: $success;
+		stroke-width: 2px;
+	}
+	.ct-series-b .ct-area {
+		fill: $info;
+		fill-opacity: 0.1;
+	}
+	.ct-series-b .ct-line,
+	.ct-series-b .ct-point {
+		stroke: $info;
+		stroke-width: 2px;
+	}
+	.ct-series-c .ct-area {
+		fill: $danger;
+		fill-opacity: 0.1;
+	}
+	.ct-series-c .ct-line,
+	.ct-series-c .ct-point {
+		stroke: $danger;
+		stroke-width: 2px;
+	}
+	.ct-series-a .ct-point,
+	.ct-series-b .ct-point,
+	.ct-series-c .ct-point{
+		stroke-width: 6px;
+	}
+}
+.piechart{
+		.ct-series-a .ct-slice-donut{
+				stroke:$info
+		}
+		.ct-series-b .ct-slice-donut{
+				stroke:$success
+		}
+		.ct-series-c .ct-slice-donut{
+				stroke:$inverse
+		}
+		.ct-series-d .ct-slice-donut{
+				stroke:$danger
+		}
+		.ct-series-e .ct-slice-donut{
+				stroke:$warning
+		}
+}

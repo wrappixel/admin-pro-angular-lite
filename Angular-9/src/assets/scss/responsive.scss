@@ -1,0 +1,138 @@
+/*
+Template Name: Admin Press Admin
+Author: Themedesigner
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+/*============================================================== 
+ For Laptop & above all (1650px) 
+ ============================================================== */
+
+@media(min-width:1650px) {
+}
+/*============================================================== 
+ For Laptop & above all (1370px) 
+ ============================================================== */
+
+@media(max-width:1370px) {
+}
+
+
+/*-- ============================================================== 
+ Small Desktop & above all (1024px) 
+ ============================================================== */
+
+@media(min-width:1024px) {
+    .page-wrapper{
+        margin-left:240px;    
+    }  
+    .footer{
+        left: 240px;
+    }     
+}
+
+@media(max-width:1023px) {
+    .widget-app-columns {
+        column-count:1;
+    }
+}
+
+
+/*-- ============================================================== 
+ Ipad & above all(768px) 
+ ============================================================== */
+
+@media(min-width:768px) {
+    .navbar-header {
+        width: 240px;
+        flex-shrink:0;
+        .navbar-brand {
+            padding-top: 0px;
+        }
+    }
+    /*This is for the breeadcrumd*/
+    .page-titles{
+        .breadcrumb{
+            float:right;
+        }
+    }
+    .card-group .card:first-child, .card-group .card:not(:first-child):not(:last-child){
+        border-right:1px solid rgba(0, 0, 0, 0.03);
+    }
+   .mini-sidebar {
+        .page-wrapper{
+            margin-left:0px;
+        }
+        .footer{
+            left: 0px;
+        }
+    }
+    .flex-wrap{
+        flex-wrap:nowrap!important;
+        -webkit-flex-wrap:nowrap!important;
+    }
+    .navbar-expand-md .navbar-nav .dropdown-menu-right{
+        left:auto!important;
+    }
+}
+
+
+/*-- ============================================================== 
+ Phone and below ipad(767px) 
+ ============================================================== */
+
+@media(max-width:767px) {
+    
+    /*Header*/
+    .topbar {
+        
+        width: 100%;
+        .top-navbar {
+            padding-right: 15px;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            -webkit-align-items: center;
+            .navbar-collapse {
+                display: flex;
+                width: 100%;
+            }
+            .navbar-header{ 
+                width: 70px;
+            }
+            .navbar-brand span{
+                display: none;
+            }
+            .navbar-nav {
+                flex-direction: row;
+                > .nav-item.show {
+                    position: static;
+                    .dropdown-menu {
+                        width: 100%;
+                        margin-top: 0px;
+                        left:0!important;
+                        right:0!important;
+                    }
+                }
+                > .nav-item > .nav-link {
+                    padding-left: .50rem;
+                    padding-right: .50rem;
+                }
+                .dropdown-menu {
+                    position: absolute;
+                }
+            }
+        }
+    }
+
+    /*Sidebar and wrapper*/
+    .mini-sidebar .page-wrapper{
+        margin-left:0px;
+    }
+
+    /*Footer*/
+    .footer{
+        left: 0px;
+    }
+}

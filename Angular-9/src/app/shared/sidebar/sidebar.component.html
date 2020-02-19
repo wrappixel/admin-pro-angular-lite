@@ -1,0 +1,20 @@
+<nav class="sidebar-nav">
+    <ul id="sidebarnav">
+        <!-- First level menu -->
+        <li [class.active]="showMenu === sidebarnavItem.title" *ngFor="let sidebarnavItem of sidebarnavItems" [routerLinkActive]="sidebarnavItem.submenu.length != 0 ? '' : 'active'">
+            <div class="nav-small-cap" *ngIf="sidebarnavItem.extralink === true">{{sidebarnavItem.title}}</div>
+            <a [routerLink]="sidebarnavItem.class === '' ? [sidebarnavItem.path] : null" [ngClass]="[sidebarnavItem.class]" *ngIf="!sidebarnavItem.extralink;"
+                (click)="addExpandClass(sidebarnavItem.title)">
+                <i [ngClass]="[sidebarnavItem.icon]"></i>
+                <span class="hide-menu">{{sidebarnavItem.title}}
+                    <span *ngIf="sidebarnavItem.label != '' " [ngClass]="[sidebarnavItem.labelClass]">{{sidebarnavItem.label}}</span>
+                </span>
+            </a>
+
+        </li>
+        <li class="m-t-40 p-20 upgrade-btn">
+            <a href="https://wrappixel.com/templates/adminpro-angular-dashboard/" target="_blank" class="btn btn-danger text-white">Upgrade
+                To Pro</a>
+        </li>
+    </ul>
+</nav>
