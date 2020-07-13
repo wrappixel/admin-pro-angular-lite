@@ -1,4 +1,4 @@
-# adminpro-admin-angular-lite 7 and 8
+# adminpro-admin-angular-lite 7 , 8, 9 and 10
 
 <h4><a href="https://wrappixel.com/demos/angular-admin-templates/admin-pro-angular-lite/angular/component/cards">Free Version Demo Link</a></h4>
 
@@ -7,7 +7,6 @@
 <a href="https://www.wrappixel.com/templates/adminpro-angular-dashboard/"><img src="https://www.wrappixel.com/wp-content/uploads/2019/01/adminpro-angular-nw-1.jpg"/></a><br/>
 
 <h4><a href="https://wrappixel.com/demos/angular-admin-templates/admin-pro-angular/main/dashboard/dashboard1">Demo</a></h4>
-
 
 ## Development server
 
