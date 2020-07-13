@@ -1,0 +1,145 @@
+/*
+Template Name: Admin Pro Admin
+Author: Themedesigner
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+
+/*-------------------*/
+
+
+/*Bootstrap 4 hack*/
+
+
+/*-------------------*/
+
+.bootstrap-touchspin {
+  .input-group-btn {
+    align-items: normal;
+  }
+}
+
+.form-control-danger, .form-control-success, .form-control-warning {
+    padding-right: 2.25rem;
+    background-repeat: no-repeat;
+    background-position: center right .5625rem;
+    -webkit-background-size: 1.125rem 1.125rem;
+    background-size: 1.125rem 1.125rem;
+}
+
+.has-success .col-form-label, .has-success .custom-control, .has-success .form-check-label, .has-success .form-control-feedback, .has-success .form-control-label {
+    color: $success;
+}
+
+.has-success .form-control-success {
+    background-image: url(../../assets/images/icon/success.svg);
+}
+
+.has-success .form-control {
+    border-color: $success;
+}
+
+.has-warning .col-form-label, .has-warning .custom-control, .has-warning .form-check-label, .has-warning .form-control-feedback, .has-warning .form-control-label {
+    color: $warning;
+}
+
+.has-warning .form-control-warning {
+    background-image: url(../../assets/images/icon/warning.svg);
+}
+
+.has-warning .form-control {
+    border-color: $warning;
+}
+
+.has-danger .col-form-label, .has-danger .custom-control, .has-danger .form-check-label, .has-danger .form-control-feedback, .has-danger .form-control-label {
+    color: $danger;
+}
+
+.has-danger .form-control-danger {
+    background-image: url(../../assets/images/icon/danger.svg);
+}
+
+.has-danger .form-control {
+    border-color: $danger;
+}
+
+.input-group-addon {
+    [type="radio"]:not(:checked), 
+    [type="radio"]:checked, 
+    [type="checkbox"]:not(:checked), 
+    [type="checkbox"]:checked {
+        position: initial;
+        opacity: 1;
+    }
+}
+
+.invisible {
+    visibility: hidden !important;
+}
+
+.hidden-xs-up {
+    display: none !important;
+}
+
+@media (max-width: 575px) {
+    .hidden-xs-down {
+        display: none !important;
+    }
+}
+
+@media (min-width: 576px) {
+    .hidden-sm-up {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .hidden-sm-down {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .hidden-md-up {
+        display: none !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .hidden-md-down {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .hidden-lg-up {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1199px) {
+    .hidden-lg-down {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hidden-xl-up {
+        display: none !important;
+    }
+}
+
+.hidden-xl-down {
+    display: none !important;
+}
+
+
+//* card -inverse-font-white
+.card-inverse {
+    .card-blockquote,
+    .card-footer,
+    .card-header,
+    .card-title {
+        color: $white;
+    }
+}

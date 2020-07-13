@@ -1,0 +1,103 @@
+/*
+Template Name: Admin Press Admin
+Author: Themedesigner
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+
+/*******************/
+/*Chat widget*/
+/*******************/
+
+.message-box {
+    ul li {
+        .drop-title {
+            font-weight: 500;
+            padding: 11px 20px 15px;
+            border-bottom: 1px solid $border;
+        }
+        .nav-link {
+            border-top: 1px solid $border;
+            padding-top: 15px;
+        }
+    }
+    .message-widget {
+        position: relative;
+        a {
+            border-bottom: 1px solid $border;
+            display: block;
+            text-decoration: none;
+            padding: 9px 15px;
+            &:hover {
+                background: $light;
+            }
+            &:last-child {
+                border-bottom: 0px;
+            }
+            div {
+                white-space: normal;
+            }
+            .user-img {
+                width: 45px;
+                position: relative;
+                display: inline-block;
+                margin: 0 10px 15px 0;
+                img {
+                    width: 100%;
+                }
+                .profile-status {
+                    border: 2px solid $white;
+                    border-radius: 50%;
+                    display: inline-block;
+                    height: 10px;
+                    left: 33px;
+                    position: absolute;
+                    top: -1px;
+                    width: 10px;
+                }
+                .online {
+                    background: $success;
+                }
+                .busy {
+                    background: $danger;
+                }
+                .away {
+                    background: $warning;
+                }
+                .offline {
+                    background: $warning;
+                }
+            }
+            .mail-contnet {
+                display: inline-block;
+                width: 73%;
+                vertical-align: middle;
+                h5 {
+                    margin: 5px 0px 0;
+                }
+                .mail-desc,
+                .time {
+                    font-size: 12px;
+                    display: block;
+                    margin: 1px 0;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    color: $bodytext;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+/*Blog widgets*/
+
+.blog-widget{
+    margin-top: 30px;
+    .blog-image img{
+        border-radius: $radius;
+        margin-top: -45px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0,0.2);
+    }
+}

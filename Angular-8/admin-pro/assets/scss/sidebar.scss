@@ -1,0 +1,123 @@
+/*
+Template Name: Admin Pro Admin
+Author: Wrappixel
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+
+
+/*******************
+Main sidebar
+******************/
+
+.left-sidebar {
+    position: absolute;
+    width: 240px;
+    height: 100vh;
+    top: 0px;
+    z-index: 20;
+    padding-top: 70px;
+    background: $sidebar;
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+}
+
+.fix-sidebar .left-sidebar {
+    position: fixed;
+}
+
+/*******************
+sidebar navigation
+******************/
+
+.scroll-sidebar {
+    height: calc(100vh - 70px);
+    position: relative;
+    &.ps .ps__rail-y {
+        left: 2px;
+        right: auto;
+        background: none;
+        width: 6px;
+        /* If using `left`, there shouldn't be a `right`. */
+    }
+}
+
+.collapse.in {
+    display: block;
+}
+.nav-small-cap {
+        font-size: 12px;
+        margin-bottom: 0px;
+        padding: 14px 14px 14px 20px;
+        font-weight: 500;
+    }
+.sidebar-nav {
+    padding: 15px 0 0 0px;
+    ul {
+        margin: 0px;
+        padding: 0px;
+        li {
+            list-style: none;
+            a {
+                color: $sidebar-text;
+                padding: 8px 35px 8px 15px;
+                display: block;
+                font-size: 14px;
+                font-weight: 400;
+                &.active,
+                &:hover {
+                    color: $themecolor;
+                    i {
+                        color: $themecolor;
+                    }
+                }
+                &.active {
+                    font-weight: 500;
+                    color: $dark;
+                }
+            }
+            ul {
+                padding-left: 36px;
+                ul {
+                    padding-left: 15px;
+                }
+            }
+            &.nav-devider {
+                height: 1px;
+                background: $border;
+                display: block;
+                margin: 15px 0;
+            }
+        }
+    }
+    > ul > li > a {
+        i {
+            width: 31px;
+            font-size: 24px;
+            display: inline-block;
+            vertical-align: middle;
+            color: $sidebar-icons;
+        }
+        .label {
+            float: right;
+            margin-top: 6px;
+        }
+        &.active {
+            font-weight: 400;
+            background: #242933;
+            color: $themecolor-alt;
+        }
+    }
+    > ul > li {
+        margin-bottom: 5px;
+        &.active > a {
+            color: $themecolor;
+            font-weight: 500;
+            i {
+                color: $themecolor;
+            }
+        }
+    }
+}
+
+
+

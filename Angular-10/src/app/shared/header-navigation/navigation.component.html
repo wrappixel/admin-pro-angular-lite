@@ -1,0 +1,28 @@
+<!-- ============================================================== -->
+<!-- toggle and nav items -->
+<!-- ============================================================== -->
+<ul class="navbar-nav mr-auto float-left">                
+    <li (click)="toggleSidebar.emit()" class="nav-item m-l-10 d-block d-lg-none"> <a class="nav-link sidebartoggler text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+</ul>
+<!-- ============================================================== -->
+<!-- User profile and search -->
+<!-- ============================================================== -->
+<ul class="navbar-nav my-lg-0 float-right">
+    <!-- ============================================================== -->
+    <!-- Profile -->
+    <!-- ============================================================== -->
+    <li class="nav-item dropdown" ngbDropdown placement="bottom-right">
+        <a ngbDropdownToggle class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
+        <div class="dropdown-menu" ngbDropdownMenu>
+            <ul class="dropdown-user">
+                <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
+                <li><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
+                <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+            </ul>
+        </div>
+    </li>
+</ul>

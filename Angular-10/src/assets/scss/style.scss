@@ -1,0 +1,25 @@
+/*
+Template Name: Admin Pro Admin
+Author: Themedesigner
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+
+@import 'variable'; 
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import 'app';
+@import 'pages';
+@import 'sidebar';
+@import '../scss/icons/font-awesome/css/font-awesome.min.css';
+@import '../scss/icons/simple-line-icons/css/simple-line-icons.css';
+@import '../scss/icons/themify-icons/themify-icons.css'; 
+@import "../scss/icons/material-design-iconic-font/css/materialdesignicons.min.css";
+@import 'widgets';
+@import 'grid';
+@import 'responsive';  
+@import 'spinners.scss';   
+@import 'theme-settings.scss';   
+
+// color css
+
+@import 'colors/default-dark';
