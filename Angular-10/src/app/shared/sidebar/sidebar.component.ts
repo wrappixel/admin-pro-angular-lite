@@ -3,7 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ROUTES } from './menu-items';
 import { RouteInfo } from './sidebar.metadata';
 import { Router, ActivatedRoute } from '@angular/router';
-declare var $: any;
+//declare var $: any;
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html'
@@ -11,9 +11,10 @@ declare var $: any;
 export class SidebarComponent implements OnInit {
   showMenu = '';
   showSubMenu = '';
-  public sidebarnavItems: any[];
+  public sidebarnavItems: RouteInfo[]=[];
+
   // this is for the open close
-  addExpandClass(element: any) {
+  addExpandClass(element: string) {
     if (element === this.showMenu) {
       this.showMenu = '0';
     } else {

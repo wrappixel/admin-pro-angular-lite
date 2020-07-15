@@ -3,6 +3,7 @@ import { of as observableOf, Observable, Subject, merge, of } from 'rxjs';
 import { tap, map, switchMap, distinctUntilChanged, debounceTime, catchError, filter } from 'rxjs/operators';
 import { Component, Injectable, ViewChild } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { AbstractControl } from '@angular/forms';
 
 const WIKI_URL = 'https://en.wikipedia.org/w/api.php';
 const PARAMS = new HttpParams({
@@ -140,7 +141,7 @@ export class WikipediaService {
       return of([]);
     }
 
-    return this.http.get(WIKI_URL, { params: PARAMS.set('search', term) }).pipe(map(response => response[1]));
+    return this.http.get(WIKI_URL, { params: PARAMS.set('search', term) }).pipe(map(response => response));
   }
 }
 
@@ -158,16 +159,16 @@ export class WikipediaService {
   ]
 })
 export class NgbdtypeheadBasicComponent {
-  public model1: any;
-  model2: any;
-  public model3: any;
-  public model5: any;
+  public model1:string=''
+  model2='';
+  public model3='';
+  public model5='';
 
-  model4: any;
+
   searching = false;
   searchFailed = false;
 
-  @ViewChild('instance', { static: true }) instance;
+  @ViewChild('instance', { static: true }) instance:any;
   focus$ = new Subject<string>();
   click$ = new Subject<string>();
   search1 = (text$: Observable<string>) =>

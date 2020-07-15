@@ -26,7 +26,7 @@ export class NgbdCarouselBasicComponent {
 	  pauseOnIndicator = false;
 	  pauseOnHover = true;
 
-	  @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
+	  @ViewChild('carousel', {static : true}) carousel: NgbCarousel=Object.create(null);
 
 	  togglePaused() {
 	    if (this.paused) {

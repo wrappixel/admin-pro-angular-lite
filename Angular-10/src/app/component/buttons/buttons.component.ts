@@ -8,7 +8,10 @@ export class ButtonsComponent {
 
   public radioGroupForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder) {
+    this.checkboxGroupForm=Object.create(null);
+    this.radioGroupForm=Object.create(null);
+  }
 
   model = {
     left: true,

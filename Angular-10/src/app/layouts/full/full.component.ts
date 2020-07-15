@@ -14,7 +14,7 @@ export class FullComponent implements OnInit {
   showMinisidebar = false;
   showDarktheme = false;
 
-  public innerWidth: any;
+  public innerWidth: number=-1;
 
   public config: PerfectScrollbarConfigInterface = {};
 
@@ -28,7 +28,7 @@ export class FullComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event) {
+  onResize(event:string) {
     this.handleLayout();
   }
 

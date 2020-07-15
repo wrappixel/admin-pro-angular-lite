@@ -6,7 +6,7 @@ import {
   NgbCarouselConfig
 } from '@ng-bootstrap/ng-bootstrap';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
-declare var $: any;
+//declare var $: any;
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html'
