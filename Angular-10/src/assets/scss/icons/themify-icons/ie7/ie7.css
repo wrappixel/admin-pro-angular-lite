@@ -973,7 +973,7 @@
 .ti-apple {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe744;');
 }
-.ti-android {
+.ti-andrAdminid {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe745;');
 }
 .ti-save {

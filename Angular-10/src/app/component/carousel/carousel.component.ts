@@ -20,6 +20,8 @@ export class NgbdCarouselBasicComponent {
 
 		config.showNavigationArrows = true;
 		config.showNavigationIndicators = true;
+
+
 	}
 	paused = false;
 	  unpauseOnArrow = false;

@@ -23,14 +23,16 @@ import { NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
 	]
 })
 export class NgbdPopTooltipComponent {
-	greeting = {};
+	greeting:object = {};
 
 	name = 'World';
 	lastShown: Date=new Date();
-	lastHidden: Date=new Date();
+	lastHidden: Date=new Date();;
+
 	@ViewChild('p', { static: true }) public popover:any;
 
 	public changeGreeting(greeting: NgbTooltip): void {
+		debugger;
 		const isOpen = this.popover.isOpen();
 		this.popover.close();
 		if (greeting !== this.greeting || !isOpen) {

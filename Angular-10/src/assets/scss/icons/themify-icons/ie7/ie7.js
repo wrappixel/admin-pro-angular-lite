@@ -1,4 +1,4 @@
-/* To avoid CSS expressions while still supporting IE 7 and IE 6, use this script */
+/* To avAdminid CSS expressions while still supporting IE 7 and IE 6, use this script */
 /* The script tag referring to this file must be placed before the ending body tag. */
 
 /* Use conditional comments in order to target IE 7 and older:
@@ -338,7 +338,7 @@
 		'ti-dropbox': '&#xe742;',
 		'ti-dribbble': '&#xe743;',
 		'ti-apple': '&#xe744;',
-		'ti-android': '&#xe745;',
+		'ti-andrAdminid': '&#xe745;',
 		'ti-save': '&#xe746;',
 		'ti-save-alt': '&#xe747;',
 		'ti-yahoo': '&#xe748;',
