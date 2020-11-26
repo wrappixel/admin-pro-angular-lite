@@ -1,0 +1,284 @@
+// App
+
+/*============================================================== 
+ For all pages 
+ ============================================================== */
+
+#main-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.page-wrapper {
+  background: $body-bg;
+  position: relative;
+  transition: 0.2s ease-in;
+}
+
+.page-wrapper > .container-fluid {
+  padding: 20px;
+  min-height: calc(100vh - 180px);
+}
+
+.lstick {
+  width: 2px;
+  background: $themecolor;
+  height: 30px;
+  margin-left: -20px;
+  margin-right: 18px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*******************
+ Footer
+*******************/
+
+.footer {
+  padding: 15px 20px;
+}
+
+/*******************
+ Vertical layout
+*******************/
+
+#main-wrapper[data-layout="vertical"] {
+  /*Vertical*/
+  .topbar .top-navbar .navbar-header {
+    //width: $sidebar-width-full;
+    transition: 0.2s ease-in;
+  }
+
+  /*sidebar type*/
+  &[data-sidebartype="full"] {
+    .page-wrapper {
+      margin-left: $sidebar-width-full;
+    }
+  }
+  /*Sidebar position*/
+  &[data-sidebar-position="fixed"] {
+    .topbar .top-navbar .navbar-header {
+      position: fixed;
+      z-index: 10;
+    }
+    .left-sidebar {
+      position: fixed;
+    }
+  }
+  /*Header position*/
+  &[data-header-position="fixed"] {
+    .topbar {
+      position: fixed;
+      width: 100%;
+    }
+    .page-wrapper {
+      padding-top: $topbar-height;
+    }
+  }
+}
+
+/*******************
+ Vertical responsive layout
+*******************/
+
+@include media-breakpoint-up(md) {
+  #main-wrapper[data-layout="vertical"] {
+    /*Vertical*/
+    &[data-sidebartype="full"] {
+      .topbar .top-navbar .navbar-header {
+        width: $sidebar-width-full;
+      }
+    }
+    /*Sidebar position*/
+    &[data-sidebar-position="fixed"][data-sidebartype="full"] {
+      .topbar .top-navbar .navbar-collapse {
+        margin-left: $sidebar-width-full;
+      }
+    }
+    &[data-sidebar-position="fixed"][data-sidebartype="mini-sidebar"] {
+      .topbar .top-navbar .navbar-collapse {
+        margin-left: $sidebar-width-mini;
+      }
+    }
+    /*Vertical with mini-sidebar*/
+    &[data-sidebartype="mini-sidebar"] {
+      .topbar .top-navbar .navbar-header {
+        width: $sidebar-width-mini;
+        .logo-text {
+          display: none;
+        }
+        &.expand-logo {
+          width: $sidebar-width-full;
+          .logo-text {
+            display: block;
+          }
+        }
+      }
+    }
+    /*Fixed sidebar with minisidebar*/
+    &[data-sidebar-position="fixed"][data-sidebartype="mini-sidebar"] {
+      .topbar .top-navbar .navbar-collapse {
+        margin-left: $sidebar-width-mini;
+      }
+    }
+    &[data-sidebartype="mini-sidebar"] {
+      .page-wrapper {
+        margin-left: $sidebar-width-mini;
+      }
+      .sidebar-nav {
+        .hide-menu,
+        .has-arrow:after {
+          display: none;
+        }
+        .nav-small-cap {
+          justify-content: center;
+        }
+      }
+      .left-sidebar {
+        width: $sidebar-width-mini;
+        &:hover {
+          width: $sidebar-width-full;
+          .sidebar-nav {
+            .hide-menu,
+            .has-arrow:after {
+              display: block;
+            }
+            .nav-small-cap {
+              justify-content: flex-start;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #main-wrapper {
+    &[data-sidebartype="mini-sidebar"] {
+      .left-sidebar {
+        left: -$sidebar-width-full;
+      }
+    }
+    &.show-sidebar {
+      .left-sidebar {
+        left: 0;
+      }
+    }
+    &[data-layout="vertical"][data-sidebar-position="fixed"] {
+      .topbar .top-navbar {
+        .navbar-collapse {
+          position: relative;
+          top: $topbar-height;
+        }
+      }
+    }
+    /*Header position*/
+    &[data-layout="vertical"][data-header-position="fixed"][data-sidebar-position="fixed"] {
+      .topbar .top-navbar {
+        .navbar-collapse {
+          position: relative;
+          top: $topbar-height;
+        }
+      }
+    }
+  }
+}
+
+/*******************/
+/*Chat widget*/
+/*******************/
+
+.message-box {
+  ul li {
+    .drop-title {
+      font-weight: 500;
+      padding: 11px 20px 15px;
+      border-bottom: 1px solid $border-color;
+    }
+    .nav-link {
+      border-top: 1px solid $border-color;
+      padding-top: 15px;
+    }
+  }
+  .message-widget {
+    position: relative;
+    a {
+      border-bottom: 1px solid $border-color;
+      display: block;
+      text-decoration: none;
+      padding: 9px 15px;
+      &:hover {
+        background: $light;
+      }
+      &:last-child {
+        border-bottom: 0px;
+      }
+      div {
+        white-space: normal;
+      }
+      .user-img {
+        width: 45px;
+        position: relative;
+        display: inline-block;
+        margin: 0 10px 15px 0;
+        img {
+          width: 100%;
+        }
+        .profile-status {
+          border: 2px solid $white;
+          border-radius: 50%;
+          display: inline-block;
+          height: 10px;
+          left: 33px;
+          position: absolute;
+          top: -1px;
+          width: 10px;
+        }
+        .online {
+          background: $success;
+        }
+        .busy {
+          background: $danger;
+        }
+        .away {
+          background: $warning;
+        }
+        .offline {
+          background: $warning;
+        }
+      }
+      .mail-contnet {
+        display: inline-block;
+        width: 73%;
+        vertical-align: middle;
+        h5 {
+          margin: 5px 0px 0;
+          color: $body-color;
+        }
+        .mail-desc,
+        .time {
+          font-size: 12px;
+          display: block;
+          margin: 1px 0;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          color: $body-color;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+/*Blog widgets*/
+
+.blog-widget {
+  margin-top: 30px;
+  .blog-image img {
+    border-radius: 4px;
+    margin-top: -45px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+}
