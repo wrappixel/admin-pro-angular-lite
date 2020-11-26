@@ -1,7 +1,7 @@
-<!-- # adminpro-admin-angular-lite 7 , 8, 9 and 10 -->
+<!-- # adminpro-admin-angular-lite 7 , 8, 9, 10 and 11 -->
 <!-- Heading of Template -->
 <h1>
-  <a href="https://wrappixel.com/demos/angular-admin-templates/admin-pro-angular-lite/angular">AdminPro Angular 10 Admin Lite</a>
+  <a href="https://wrappixel.com/demos/angular-admin-templates/admin-pro-angular-lite/angular">AdminPro Angular 11 Admin Lite</a>
 </h1>
 
 <!-- Main image of Template -->
