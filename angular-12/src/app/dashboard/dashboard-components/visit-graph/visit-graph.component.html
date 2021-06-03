@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-body">
+      <h4 class="card-title"><span class="lstick"></span>Visit Separation</h4>
+      <div style="height: 220px;">
+        <canvas
+          baseChart
+          height="100px"
+          [data]="doughnutChartData"
+          [labels]="doughnutChartLabels"
+          [options]="doughnutChartOptions"
+          [legend]="doughnutChartLegend"
+          [chartType]="doughnutChartType"
+          [colors]="[
+            {
+              backgroundColor: [
+                'rgb(236, 239, 241)',
+                'rgb(116, 90, 242)',
+                'rgb(38, 198, 218)',
+                'rgb(30, 136, 229)'
+              ]
+            }
+          ]"
+        >
+        </canvas>
+      </div>
+      <table class="table vm font-14">
+        <tr>
+          <td class="b-0">Mobile</td>
+          <td class="text-right font-medium b-0">38.5%</td>
+        </tr>
+        <tr>
+          <td>Tablet</td>
+          <td class="text-right font-medium">30.8%</td>
+        </tr>
+      </table>
+    </div>
+  </div>

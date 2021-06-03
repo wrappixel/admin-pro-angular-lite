@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">
+      <span class="lstick"></span>Projects of the Month
+    </h4>
+    <div class="table-responsive">
+      <table class="table vm no-th-brd pro-of-month mb-0 v-middle">
+        <thead>
+          <tr>
+            <th colspan="2">Assigned</th>
+            <th>Name</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let project of projectOfMonth'>
+            <td>
+              <span class="{{project.class}}">
+                <img [src]='project.image' alt="user" width="50" />
+              </span>
+            </td>
+            <td>
+              <h6 class="mb-0">{{project.name}}</h6>
+              <small class="text-muted">{{project.designation}}</small>
+            </td>
+            <td>{{project.project}}</td>
+            <td>{{project.priority}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
