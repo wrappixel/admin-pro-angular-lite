@@ -1,7 +1,7 @@
-<!-- # adminpro-admin-angular-lite 7 , 8, 9, 10 and 11 -->
+<!-- # adminpro-admin-angular-lite 7 , 8, 9, 10 and 11, 12 -->
 <!-- Heading of Template -->
 <h1>
-  <a href="https://wrappixel.com/demos/angular-admin-templates/admin-pro-angular-lite/angular">AdminPro Angular 11 Admin Lite</a>
+  <a href="https://wrappixel.com/demos/angular-admin-templates/admin-pro-angular-lite/angular">AdminPro Angular 12 Admin Lite</a>
 </h1>
 
 <!-- Main image of Template -->
@@ -12,7 +12,7 @@
 <!-- <h4><a href="https://wrappixel.com/demos/angular-admin-templates/admin-pro-angular-lite/angular/component/cards">Free Version Demo Link</a></h4> -->
 <!-- Description of Template -->
 <p>
-  Lorem Ipsume
+  
 </p>
 
 ## Development server
@@ -89,7 +89,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 <h2>Licensing</h2>
 <ul>
   <li>
-    <p>Copyright 2020 Wrappixel (<a href="https://www.wrappixel.com/" rel="nofollow">https://www.wrappixel.com/</a>)</p>
+    <p>Copyright 2021 Wrappixel (<a href="https://www.wrappixel.com/" rel="nofollow">https://www.wrappixel.com/</a>)</p>
   </li>
   <li>
     <p>Licensed under MIT (<a href="https://www.wrappixel.com/license/">https://www.wrappixel.com/license/</a>)</p>
