@@ -25,7 +25,12 @@
         <!-- This is for the sidebar toggle which is visible on mobile only -->
         <a
           (click)="showMobileMenu = !showMobileMenu"
-          class="nav-toggler waves-effect waves-light d-block d-md-none"
+          class="
+            nav-toggler
+            waves-effect waves-light
+            d-block d-md-none
+            text-dark
+          "
           href="javascript:void(0)"
         >
           <i [ngClass]="showMobileMenu ? 'ti-close' : 'ti-menu'"></i>
@@ -62,13 +67,20 @@
         <!-- Toggle which is visible on mobile only -->
         <!-- ============================================================== -->
         <a
-          class="topbartoggler d-block d-md-none waves-effect waves-light"
+          class="
+            topbartoggler
+            d-block d-md-none
+            waves-effect waves-light
+            text-dark
+          "
           href="javascript:void(0)"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          (click)="isCollapsed = !isCollapsed"
+          [attr.aria-expanded]="!isCollapsed"
         >
           <i class="ti-more"></i>
         </a>
@@ -80,6 +92,7 @@
         class="navbar-collapse collapse"
         id="navbarSupportedContent"
         data-navbarbg="skin6"
+        [ngbCollapse]="!isCollapsed"
       >
         <app-navigation
           (toggleSidebar)="toggleSidebarType()"

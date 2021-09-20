@@ -139,3 +139,16 @@ Topbar Responsive
     }
   }
 }
+
+@media (max-width: 767px) {
+  .topbar .top-navbar {
+    .navbar-header {
+      position: fixed;
+      z-index: 10;
+    }
+    .navbar-collapse.show {
+      position: relative;
+      top: 60px;
+    }
+  }
+}
