@@ -24,7 +24,7 @@
     "@swimlane/ngx-datatable": "^13.0.0",
     "angular-calendar": "^0.22.1",
     "bootstrap": "^4.1.1",
-    "chart.js": "^2.7.1",
+    "chart.js": "^2.9.4",
     "chartist": "^0.11.0",
     "core-js": "^2.6.9",
     "jasmine": "^3.1.0",
