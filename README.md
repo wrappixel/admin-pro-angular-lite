@@ -1,7 +1,7 @@
 <!-- # adminpro-admin-angular-lite 7 , 8, 9, 10 and 11, 12 -->
 <!-- Heading of Template -->
 <h1>
-  <a href="https://wrappixel.com/demos/angular-admin-templates/admin-pro-angular-lite/angular">AdminPro Angular 13 Admin Lite</a>
+  <a href="https://wrappixel.com/demos/angular-admin-templates/admin-pro-angular-lite/angular">AdminPro Angular 16 Admin Lite</a>
 </h1>
 
 <!-- Main image of Template -->
@@ -89,7 +89,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 <h2>Licensing</h2>
 <ul>
   <li>
-    <p>Copyright 2021 Wrappixel (<a href="https://www.wrappixel.com/" rel="nofollow">https://www.wrappixel.com/</a>)</p>
+    <p>Copyright 2023 Wrappixel (<a href="https://www.wrappixel.com/" rel="nofollow">https://www.wrappixel.com/</a>)</p>
   </li>
   <li>
     <p>Licensed under MIT (<a href="https://www.wrappixel.com/license/">https://www.wrappixel.com/license/</a>)</p>
@@ -117,7 +117,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 <h2>Useful Links</h2>
 <ul>
 <li><a href="https://www.wrappixel.com/templates/category/admin-template/">Dashboard Templates</a> from WrapPixel</li>
-<li><a href="https://www.wrappixel.com/">Bootstrap 4 Themes</a> from WrapPixel</li>
+<li><a href="https://www.wrappixel.com/">Bootstrap 5 Themes</a> from WrapPixel</li>
 <li><a href="https://www.wrappixel.com/templates/category/bootstrap-admin-templates/">Bootstrap Dashboard</a> from WrapPixel</li>
 <li><a href="https://www.wrappixel.com/templates/category/react-templates/">React Themes</a> from WrapPixel</li>
 <li><a href="https://www.wrappixel.com/templates/category/vuejs-templates/">Vuejs Templates</a> from WrapPixel</li>
