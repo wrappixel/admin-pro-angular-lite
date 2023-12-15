@@ -117,7 +117,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 <h2>Useful Links</h2>
 <ul>
 <li><a href="https://www.wrappixel.com/templates/category/admin-template/">Dashboard Templates</a> from WrapPixel</li>
-<li><a href="https://www.wrappixel.com/">Bootstrap 5 Themes</a> from WrapPixel</li>
+<li><a href="https://www.wrappixel.com/">Bootstrap Themes</a> from WrapPixel</li>
 <li><a href="https://www.wrappixel.com/templates/category/bootstrap-admin-templates/">Bootstrap Dashboard</a> from WrapPixel</li>
 <li><a href="https://www.wrappixel.com/templates/category/react-templates/">React Themes</a> from WrapPixel</li>
 <li><a href="https://www.wrappixel.com/templates/category/vuejs-templates/">Vuejs Templates</a> from WrapPixel</li>
