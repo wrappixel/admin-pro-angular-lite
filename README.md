@@ -51,7 +51,7 @@ AdminPro VueJs Admin Dashboard
 </tr>
 <tr>
   <td>
-  Angular 17 Version
+  Angular 16 Version
   </td>
   <td>
   Angular 17 Version
