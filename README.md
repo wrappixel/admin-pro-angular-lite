@@ -1,5 +1,5 @@
-# <a href="https://demos.wrappixel.com/free-admin-templates/angular/adminpro-angular-free/angular/dashboard">Adminpro Angular Free</a>
-AdminPro VueJs Admin Dashboard
+# <a href="https://adminpro-angular-free.netlify.app/dashboard">Adminpro Angular Free</a>
+AdminPro Angular Admin Dashboard
 
 <!-- Main image of Template -->
 <a target="_blank" href="https://www.wrappixel.com/templates/adminpro-angular-lite/">
@@ -19,10 +19,10 @@ AdminPro VueJs Admin Dashboard
 <tbody>
 <tr>
   <td>
-    <a href="https://demos.wrappixel.com/free-admin-templates/angular/adminpro-angular-free/angular/dashboard">Live Preview</a>
+    <a href="https://adminpro-angular-free.netlify.app/dashboard">Live Preview</a>
   </td>
   <td>
-  <a href="https://demos.wrappixel.com/free-admin-templates/angular/adminpro-angular-free/landingpage/index.html">Live Preview</a>
+  <a href="https://adminpro-angular-main.netlify.app/dashboard/dashboard1">Live Preview</a>
   </td>
 </tr>
 <tr>
@@ -139,7 +139,7 @@ AdminPro VueJs Admin Dashboard
 </a>
 <p>
   Checkout our premium version of AdminPro Angular Admin Dashboard Template for lots more features and ready to use page templates.<br>
-  <a href="https://demos.wrappixel.com/free-admin-templates/angular/adminpro-angular-free/landingpage/index.html">Check Live Preview</a> | <a href="https://www.wrappixel.com/templates/adminpro-angular-dashboard/">Download</a>
+  <a href="https://adminpro-angular-main.netlify.app/dashboard/dashboard1">Check Live Preview</a> | <a href="https://www.wrappixel.com/templates/adminpro-angular-dashboard/">Download</a>
 </p>
 
 <!-- Versions of Template -->

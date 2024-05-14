@@ -1,6 +1,6 @@
 // Sidebar
 $sidebar-link-padding: 14px 15px;
-$sidebar-icon-size: 18px;
+$sidebar-icon-size: 16px;
 $sidebar-first-level-padding: 0 0 10px 0;
 $sidebar-first-level-link-padding: 10px 15px;
 $sidebar-first-level-icon-size: 14px;
@@ -36,12 +36,9 @@ sidebar navigation
         display: flex;
         white-space: nowrap;
         align-items: center;
-        line-height: 25px;
-        opacity: 0.6;
         i {
           font-style: normal;
           width: 35px;
-          line-height: 25px;
           font-size: $sidebar-icon-size;
           color: $sidebar-icons;
           display: flex;
