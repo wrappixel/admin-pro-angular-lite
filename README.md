@@ -30,7 +30,7 @@ AdminPro Angular Admin Dashboard
       <a href="https://www.wrappixel.com/templates/adminpro-angular-lite/">Download Now</a>
   </td>
   <td>
-    <a href="https://www.wrappixel.com/templates/adminpro-angular-dashboard/">Purchase Now</a>
+    <a href="https://www.wrappixel.com/templates/adminpro-angular-dashboard/?ref=33">Purchase Now</a>
   </td>
 </tr>
 <tr>
@@ -134,12 +134,12 @@ AdminPro Angular Admin Dashboard
 
 # Upgrade to Premium version
 
-<a target="_blank" href="https://www.wrappixel.com/templates/adminpro-angular-dashboard/">
-  <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/04/adminpro-angular-dashboard-y.jpg" alt="">
+<a target="_blank" href="https://www.wrappixel.com/templates/adminpro-angular-dashboard/?ref=33">
+  <img src="https://www.wrappixel.com/wp-content/uploads/edd/2024/05/adminpro-angular-dashboard-wpn.jpg" alt="">
 </a>
 <p>
   Checkout our premium version of AdminPro Angular Admin Dashboard Template for lots more features and ready to use page templates.<br>
-  <a href="https://adminpro-angular-main.netlify.app/dashboard/dashboard1">Check Live Preview</a> | <a href="https://www.wrappixel.com/templates/adminpro-angular-dashboard/">Download</a>
+  <a href="https://adminpro-angular-main.netlify.app/dashboard/dashboard1">Check Live Preview</a> | <a href="https://www.wrappixel.com/templates/adminpro-angular-dashboard/?ref=33">Download</a>
 </p>
 
 <!-- Versions of Template -->
@@ -147,7 +147,7 @@ AdminPro Angular Admin Dashboard
 <table>
 <thead>
 <tr>
-<th>Bootstrap</th>
+<th>Angular</th>
 <th>React Js</th>
 <th>Nuxt</th>
 <th>Vue Js</th>
@@ -156,23 +156,23 @@ AdminPro Angular Admin Dashboard
 <tbody>
 <tr>
 <td>
-  <a href="https://www.wrappixel.com/templates/adminpro/" width="150px">
-    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/04/adminpro-bootstrap-admin-template-y.jpg" alt="" style="max-width:150px;">
+  <a href="https://www.wrappixel.com/templates/adminpro-angular-dashboard/?ref=33" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2024/05/adminpro-angular-dashboard-wpn.jpg" alt="" style="max-width:150px;">
   </a>
 </td>
 <td>
-  <a href="https://www.wrappixel.com/templates/adminpro-react-redux-admin/" rel="nofollow" width="150px">
-    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/04/adminpro-react-dashboard-y.jpg" alt="" style="max-width:150px;">
+  <a href="https://www.wrappixel.com/templates/adminpro-react-redux-admin/?ref=33" rel="nofollow" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2024/05/adminpro-react-dashboard-wpn.jpg" alt="" style="max-width:150px;">
   </a>
 </td>
 <td>
-  <a href="https://www.wrappixel.com/templates/adminpro-nuxtjs/" rel="nofollow" width="150px">
-    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2022/07/adminpro-nuxtjs.jpg" alt="" style="max-width:150px;">
+  <a href="https://www.wrappixel.com/templates/adminpro-nuxtjs/?ref=33" rel="nofollow" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2024/05/adminpro-nuxtjs-dashboard-wpn.jpg" alt="" style="max-width:150px;">
   </a>
 </td>
 <td>
-  <a href="https://www.wrappixel.com/templates/adminpro-vuetify-dashboard/" rel="nofollow" width="150px">
-    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/10/adminpro-vuetify-dasboard-template-y.jpg" alt="" style="max-width:150px;">
+  <a href="https://www.wrappixel.com/templates/adminpro-vuetify-dashboard/?ref=33" rel="nofollow" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2024/05/adminpro-vuetify-dashboard-wpn.jpg" alt="" style="max-width:150px;">
   </a>
 </td>
 </td>
